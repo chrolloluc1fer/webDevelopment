@@ -1,0 +1,282 @@
+[
+    {
+        "Heading": "The ansible setup script is out of date, especially for RHEL",
+        "Link": "https://github.com/Azure/azure-quickstart-templates/issues/12380"
+    },
+    {
+        "Heading": "Incorrect URL in updateEncryptionSettingsURL on the decrypt-running-windows-vm",
+        "Link": "https://github.com/Azure/azure-quickstart-templates/issues/12366"
+    },
+    {
+        "Heading": "SQL Server audit log destination not set to log analytics",
+        "Link": "https://github.com/Azure/azure-quickstart-templates/issues/12324"
+    },
+    {
+        "Heading": "\"logic-app-and-function-app\" Azure Quickstart template vanished from Visual Studio, but template still exists in repo",
+        "Link": "https://github.com/Azure/azure-quickstart-templates/issues/12323"
+    },
+    {
+        "Heading": "\"Deploy to Azure\" button in GitHub Enterprise Server flow includes a dead link from this repo",
+        "Link": "https://github.com/Azure/azure-quickstart-templates/issues/12322"
+    },
+    {
+        "Heading": "Kube Events",
+        "Link": "https://github.com/ramitsurana/awesome-kubernetes/issues/764"
+    },
+    {
+        "Heading": "Automated Links Checker Report for 11-04-2022",
+        "Link": "https://github.com/ramitsurana/awesome-kubernetes/issues/763"
+    },
+    {
+        "Heading": "Automated Links Checker Report for 04-04-2022",
+        "Link": "https://github.com/ramitsurana/awesome-kubernetes/issues/761"
+    },
+    {
+        "Heading": "Automated Links Checker Report for 28-03-2022",
+        "Link": "https://github.com/ramitsurana/awesome-kubernetes/issues/759"
+    },
+    {
+        "Heading": "Automated Links Checker Report for 21-03-2022",
+        "Link": "https://github.com/ramitsurana/awesome-kubernetes/issues/756"
+    },
+    {
+        "Heading": "what's the usage of doubleWhiteoutPrefix",
+        "Link": "https://github.com/wagoodman/dive/issues/391"
+    },
+    {
+        "Heading": "Image analysis fails after \"building cache\" and only prints \"killed\"",
+        "Link": "https://github.com/wagoodman/dive/issues/389"
+    },
+    {
+        "Heading": "Is this tool under active development?",
+        "Link": "https://github.com/wagoodman/dive/issues/388"
+    },
+    {
+        "Heading": "arm64 support",
+        "Link": "https://github.com/wagoodman/dive/issues/387"
+    },
+    {
+        "Heading": "Support to use crictl",
+        "Link": "https://github.com/wagoodman/dive/issues/383"
+    },
+    {
+        "Heading": "Migrate from winapi to widows-sys",
+        "Link": "https://github.com/alacritty/alacritty/issues/5993"
+    },
+    {
+        "Heading": "Consider pausing blinking after certain time of inactivity",
+        "Link": "https://github.com/alacritty/alacritty/issues/5992"
+    },
+    {
+        "Heading": "Don't use vao with gles2",
+        "Link": "https://github.com/alacritty/alacritty/issues/5979"
+    },
+    {
+        "Heading": "Reopening Terminal",
+        "Link": "https://github.com/alacritty/alacritty/issues/5975"
+    },
+    {
+        "Heading": "Consider sharing rasterizer and glyph cache across all windows.",
+        "Link": "https://github.com/alacritty/alacritty/issues/5954"
+    },
+    {
+        "Heading": "Python",
+        "Link": "https://github.com/sherlock-project/sherlock/issues/1302"
+    },
+    {
+        "Heading": "How can i find a social media account?",
+        "Link": "https://github.com/sherlock-project/sherlock/issues/1301"
+    },
+    {
+        "Heading": "Package Release ?",
+        "Link": "https://github.com/sherlock-project/sherlock/issues/1299"
+    },
+    {
+        "Heading": "name 'requests' is not defined",
+        "Link": "https://github.com/sherlock-project/sherlock/issues/1297"
+    },
+    {
+        "Heading": "error showing while executing the code for searching accounts",
+        "Link": "https://github.com/sherlock-project/sherlock/issues/1292"
+    },
+    {
+        "Heading": "DAFTAR SLOT 4D TERBARU 2022 SITUS JUDI SLOT ONLINE GAMPANG MENANG",
+        "Link": "https://github.com/atom/atom/issues/25393"
+    },
+    {
+        "Heading": "MACAUBET > Aplikasi Toto Macau Bet 100 Perak Diskon Terbesar 2022",
+        "Link": "https://github.com/atom/atom/issues/25392"
+    },
+    {
+        "Heading": "TOGELSHOPEEPAY | SLOT DEPOSIT SHOPEEPAY 5000 TANPA POTONGAN",
+        "Link": "https://github.com/atom/atom/issues/25391"
+    },
+    {
+        "Heading": "Situs Slot Bonus New Member 100 Di Awal To Kecil",
+        "Link": "https://github.com/atom/atom/issues/25390"
+    },
+    {
+        "Heading": "Bandar Togel Hadiah 4D 10 Juta Terpercaya 2022",
+        "Link": "https://github.com/atom/atom/issues/25389"
+    },
+    {
+        "Heading": "README.Debian says to source /usr/share/doc/fzf/examples/completion.bash, but file no longer exists",
+        "Link": "https://github.com/junegunn/fzf/issues/2790"
+    },
+    {
+        "Heading": "how to make ripgrep fzf integration command searching both file name and content",
+        "Link": "https://github.com/junegunn/fzf/issues/2789"
+    },
+    {
+        "Heading": "[Feature Request] Support undercurl",
+        "Link": "https://github.com/junegunn/fzf/issues/2769"
+    },
+    {
+        "Heading": "Feature request: update the preview window even when placeholders are empty",
+        "Link": "https://github.com/junegunn/fzf/issues/2759"
+    },
+    {
+        "Heading": "Feature Request add change-nth and change-with-nth actions",
+        "Link": "https://github.com/junegunn/fzf/issues/2743"
+    },
+    {
+        "Heading": "http2: ServerHttp2Session#close does not allow \"any existing streams to complete on their own\"",
+        "Link": "https://github.com/nodejs/node/issues/42713"
+    },
+    {
+        "Heading": "TLSSocket appears to be leaking, possibly on Connection Reset with HTTP2",
+        "Link": "https://github.com/nodejs/node/issues/42710"
+    },
+    {
+        "Heading": "Nominating Yoshiki Kurihara (@kuriyosh) for Collaborator",
+        "Link": "https://github.com/nodejs/node/issues/42703"
+    },
+    {
+        "Heading": "'stream.push() after EOF' error when using Readable.fromWeb",
+        "Link": "https://github.com/nodejs/node/issues/42694"
+    },
+    {
+        "Heading": "Reintroduce x86 Windows support",
+        "Link": "https://github.com/nodejs/node/issues/42690"
+    },
+    {
+        "Heading": "[BUG] Review LigthFM notebook and do test",
+        "Link": "https://github.com/microsoft/recommenders/issues/1700"
+    },
+    {
+        "Heading": "[ASK] Using datasets with a large number of users such as Gowalla in LightGCN model, RAM gets a lot involved",
+        "Link": "https://github.com/microsoft/recommenders/issues/1697"
+    },
+    {
+        "Heading": "[BUG] We don't have tests for VAE",
+        "Link": "https://github.com/microsoft/recommenders/issues/1694"
+    },
+    {
+        "Heading": "[BUG] We don't have tests for the Amazon review dataset",
+        "Link": "https://github.com/microsoft/recommenders/issues/1693"
+    },
+    {
+        "Heading": "How to use multiple GPU setup for LightGCN ?",
+        "Link": "https://github.com/microsoft/recommenders/issues/1681"
+    },
+    {
+        "Heading": "'defining function based on alias `dls' error when using both docker and systemadmin plugins",
+        "Link": "https://github.com/ohmyzsh/ohmyzsh/issues/10851"
+    },
+    {
+        "Heading": "Slow to type commands",
+        "Link": "https://github.com/ohmyzsh/ohmyzsh/issues/10850"
+    },
+    {
+        "Heading": "Prefix conflict in tmux when ssh into other tmux",
+        "Link": "https://github.com/ohmyzsh/ohmyzsh/issues/10847"
+    },
+    {
+        "Heading": "shell pauses for 10 seconds every time I press enter",
+        "Link": "https://github.com/ohmyzsh/ohmyzsh/issues/10846"
+    },
+    {
+        "Heading": "Add git plugin alias for \"git commit --no-edit\" ",
+        "Link": "https://github.com/ohmyzsh/ohmyzsh/issues/10835"
+    },
+    {
+        "Heading": "Programgen promises don't persist through variables",
+        "Link": "https://github.com/pulumi/pulumi/issues/9388"
+    },
+    {
+        "Heading": "Pulumi bails with no error messages (exit code 255)",
+        "Link": "https://github.com/pulumi/pulumi/issues/9386"
+    },
+    {
+        "Heading": "Add update plan support to Automation API",
+        "Link": "https://github.com/pulumi/pulumi/issues/9385"
+    },
+    {
+        "Heading": "Allow passing multiple URNs to the state unprotect command",
+        "Link": "https://github.com/pulumi/pulumi/issues/9382"
+    },
+    {
+        "Heading": "python dynamic resource providers suddenly stopped working",
+        "Link": "https://github.com/pulumi/pulumi/issues/9381"
+    },
+    {
+        "Heading": "apt install git -y",
+        "Link": "https://github.com/jlevy/the-art-of-command-line/issues/767"
+    },
+    {
+        "Heading": "README.md",
+        "Link": "https://github.com/jlevy/the-art-of-command-line/issues/765"
+    },
+    {
+        "Heading": "Commandline",
+        "Link": "https://github.com/jlevy/the-art-of-command-line/issues/762"
+    },
+    {
+        "Heading": "A typo in README-zh.md",
+        "Link": "https://github.com/jlevy/the-art-of-command-line/issues/759"
+    },
+    {
+        "Heading": "Н",
+        "Link": "https://github.com/jlevy/the-art-of-command-line/issues/757"
+    },
+    {
+        "Heading": "Adding syntax for Linker script",
+        "Link": "https://github.com/sharkdp/bat/issues/2154"
+    },
+    {
+        "Heading": "colorize lines in logs differently depending on importance",
+        "Link": "https://github.com/sharkdp/bat/issues/2152"
+    },
+    {
+        "Heading": "add syntax highlighting support for nmap NSE script",
+        "Link": "https://github.com/sharkdp/bat/issues/2151"
+    },
+    {
+        "Heading": "Clickable URLs",
+        "Link": "https://github.com/sharkdp/bat/issues/2149"
+    },
+    {
+        "Heading": "Using bat as a library and printing binary content displays bat-specific error message",
+        "Link": "https://github.com/sharkdp/bat/issues/2146"
+    },
+    {
+        "Heading": "Add a command to run run_ci.sh in CONTRIBUTING.md",
+        "Link": "https://github.com/bregman-arie/devops-exercises/issues/212"
+    },
+    {
+        "Heading": "Update scripts/run_ci.sh to cover directories in the exercises dir",
+        "Link": "https://github.com/bregman-arie/devops-exercises/issues/183"
+    },
+    {
+        "Heading": "Add basic CI",
+        "Link": "https://github.com/bregman-arie/devops-exercises/issues/182"
+    },
+    {
+        "Heading": "Add suggestion on projects to fork (for complete beginners)",
+        "Link": "https://github.com/bregman-arie/devops-exercises/issues/160"
+    },
+    {
+        "Heading": "Can we add something related to ESXI?",
+        "Link": "https://github.com/bregman-arie/devops-exercises/issues/154"
+    }
+]
