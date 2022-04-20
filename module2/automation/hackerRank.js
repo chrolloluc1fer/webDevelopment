@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer");
 const mail = "cetiti7811@carsik.com";
 const password = "chrollolucifer";
+const code = require('./code');
 let browserPromise = puppeteer.launch({ headless: false, defaultViewport: null, args: ['--start-fullscreen'] })
 
 let page;
@@ -44,17 +45,18 @@ browserPromise.then(function (browser) {
 }).then(function () {
     return waitAndClick("[value=warmup]");
 }).then(function () {
-    let questionWaitPromise = page.waitForSelector(".ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled");
-    return questionWaitPromise;
-}).then(function () {
-    let allQuestion = page.evaluate(function () {
-        let question = document.querySelectorAll(".ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled");
-        question[1].click();
-        return;
+    let linkPromise = page.evaluate(function () {
+        let arr = [];
+        let allChallenge = document.querySelectorAll(".js-track-click.challenge-list-item");
+        for (let i = 1; i < allChallenge.length; i++) {
+            arr.push(allChallenge[i].href);
+        }
+        return arr;
     })
-    return allQuestion;
-}).then(function () {
-    return waitAndClick('[type="checkbox"]');
+    return linkPromise;
+}).then(function (questionArr) {
+    let questionPromise = questionSolver(questionArr[0], code.answers[0])
+    return questionPromise;
 })
 
 
@@ -74,4 +76,45 @@ function waitAndClick(selector) {
     })
 }
 
+
+function questionSolver(link, solution) {
+    new Promise(function (resolve, reject) {
+        let linkPromise = page.goto(link);
+        linkPromise.then(function () {
+            return waitAndClick(".checkBoxWrapper input")
+        }).then(function () {
+            return waitAndClick("#input-1");
+        }).then(function () {
+            let typePromise = page.type("#input-1", solution);
+            return typePromise;
+        }).then(function () {
+            let holdControl = page.keyboard.down("Control")
+            return holdControl;
+        }).then(function () {
+            let holdA = page.keyboard.press("A");
+            return holdA;
+        }).then(function () {
+            let holdX = page.keyboard.press("X");
+            return holdX;
+        }).then(function () {
+            let leaveControl = page.keyboard.up("Control");
+            return leaveControl;
+        }).then(function () {
+            return waitAndClick(".monaco-editor.no-user-select.vs");
+        }).then(function () {
+            let holdControl = page.keyboard.down("Control")
+            return holdControl;
+        }).then(function () {
+            let holdA = page.keyboard.press("A");
+            return holdA;
+        }).then(function () {
+            let holdV = page.keyboard.press("V");
+            return holdV;
+        }).then(function () {
+            return waitAndClick(".ui-btn.ui-btn-normal.ui-btn-primary.pull-right.hr-monaco-submit.ui-btn-styled");
+        }).then(function () {
+            console.log("Success")
+        })
+    })
+}
 
