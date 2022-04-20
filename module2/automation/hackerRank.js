@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const mail = "cetiti7811@carsik.com";
 const password = "chrollolucifer";
-let browserPromise = puppeteer.launch({ headless: false, defaultViewport: null })
+let browserPromise = puppeteer.launch({ headless: false, defaultViewport: null ,args: ['--start-fullscreen']})
 
 let page;
 
@@ -73,9 +73,6 @@ browserPromise.then(function (browser) {
 }).then(function(){
     let waitPromise = page.waitForSelector("#input-2");
     return waitPromise;
-}).then(function(){
-    let clickInput = page.click("#input-2");
-    return clickInput;
 })
 
 
