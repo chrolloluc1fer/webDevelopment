@@ -17,7 +17,7 @@ const code = require('./code');
     });
     await page.waitForSelector("#input-1");
     await page.type("#input-1", mail, { delay: 100 });
-    await page.type("#input-2", pass, { delay: 100 });
+    await page.type("#input-2", password, { delay: 100 });
     await waitAndClick('button[data-analytics="LoginPassword"]', page);
     await waitAndClick('[data-automation="algorithms"]', page);
     await page.waitForSelector(".filter-group");
