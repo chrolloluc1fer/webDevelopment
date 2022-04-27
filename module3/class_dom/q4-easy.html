@@ -19,7 +19,12 @@
       <li>10</li>
     </ul>
     <script>
-      //insertBefore
+      let lis = document.querySelectorAll("li");
+      let newLi = document.createElement("li");
+      newLi.innerText="7"
+      let relevantLi = lis[6];
+      let parentTag = document.querySelector("ul"); 
+      parentTag.insertBefore(newLi,relevantLi);
     </script>
   </body>
 </html>
