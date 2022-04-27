@@ -33,7 +33,14 @@
       <div class="ball"></div>
     </div>
     <script>
-      
+      let ptag = document.querySelector('p');
+        ptag.innerText="2 + 2 = 4";
+
+        let balltag = document.querySelectorAll(".ball");
+        for(let i = 0; i < balltag.length; i++){
+          balltag[i].style.backgroundColor="blue";
+        }
+        
     </script>
   </body>
 </html>
