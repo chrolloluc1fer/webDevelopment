@@ -1,0 +1,117 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    counter-reset: myCount 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Serif', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+li button {
+    cursor: pointer;
+}
+
+.input {
+    
+    border-radius: 5px;
+    background-color: white;
+    font-size: 2rem;
+}
+
+
+.header {
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.submit {
+    font-size: large;
+    border: 1px black solid;
+    margin-left: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear {
+    font-size: large;
+    border: 1px black solid;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.submit:hover {
+    background-color: rgb(229, 226, 226);
+}
+
+.clear:hover {
+    background-color: rgb(229, 226, 226);
+}
+
+.main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+li::before {
+    content: "Task " counter(myCount) " -:";
+    counter-increment: myCount 1;
+}
+
+li {
+
+    display: flex;
+    list-style-type: none;
+    font-size: larger;
+    margin: 1.5rem 0;
+}
+
+li div {
+    font-weight: bolder;
+}
+
+.deleteAll {
+    font-size: large;
+    border: 1px black solid;
+    margin-left: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete {
+    font-weight: bolder;
+    width: 2rem;
+   
+    border: 1px solid black;
+    background: none;
+   background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.done{
+    font-weight: bolder;
+    width: 2rem;
+   
+    border: 1px solid black;
+    background: none;
+   background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+}
