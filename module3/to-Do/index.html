@@ -16,21 +16,26 @@
 
 <body>
 
-    <div class="header">
-        <input type="text" placeholder="Enter a Task" class="input">
-        <button type="submit" class="submit">Add Task</button>
-        <button type="submit" class="clear">Clear</button>
-    </div>
-    <div class="main">
-        <ul>
-        </ul>
-    </div>
-    <div class="completed_task">
-        <ul>
-        </ul>
-    </div>
-    <div class="footer"><button type="submit" class="deleteAll">Delete All</button></div>
-
+            <div class="content">
+                <div class="header">
+                    <input type="text" placeholder="Enter a Task" class="input">
+                        <div class="input_buttons">
+                            <button type="submit" class="submit">Add</button>
+                            <button type="submit" class="clear">Clear</button>
+                        </div>
+                  
+                        </div>
+                <ul class="pending_task">
+                </ul>
+                
+                        
+                    
+                    <div class="footer"><button type="submit" class="deleteAll">Delete All</button></div>
+                    <h3 class="completed_task_heading">"Completed Tasks"</h3>
+                    <ul class="completed_task">
+                    </ul>
+                    <div class="footer"><button type="submit" class="deleteAllCompletedTask">Clear All</button></div>
+            </div>  
     <script src="./script.js"></script>
 </body>
 

@@ -1,9 +1,13 @@
-body {
-    background-color: lightblue;
+ body {
+     background: url("./7561340.jpg");
+    
     margin: 0;
     counter-reset: myCount 0;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Serif', serif;
+    counter-reset: pending;
+    
+
 }
 
 *,
@@ -11,107 +15,120 @@ body {
 *::after {
     box-sizing: border-box;
     line-height: 1.6;
-}
-
-li button {
-    cursor: pointer;
-}
-
-.input {
+} 
+ .content{
+    width: 25rem;
+    margin:0 auto;
+ }
+.header{
     
-    border-radius: 5px;
-    background-color: white;
-    font-size: 2rem;
-}
-
-
-.header {
-    margin: 0 auto;
-    width: 800px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.submit {
-    font-size: large;
-    border: 1px black solid;
-    margin-left: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.clear {
-    font-size: large;
-    border: 1px black solid;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 0.5rem;
-}
-
-.submit:hover {
-    background-color: rgb(229, 226, 226);
-}
-
-.clear:hover {
-    background-color: rgb(229, 226, 226);
-}
-
-.main {
-    width: 800px;
-    margin: 0 auto;
-}
-
-
-.footer {
     display: flex;
-    justify-content: center;
+    
+    margin:1rem auto;
+}
+.input_buttons{
+    margin-left: 5rem;
+    
+}
+.submit,.clear,.deleteAllCompletedTask,.deleteAll{
+    padding:0.2rem 1rem;
+    border-radius: 900px;
+    border: none;
+    background-color: blue;
+    color:white;
+    cursor: pointer;
+
+}
+.submit:hover,.clear:hover{
+background-color: rgb(34, 34, 172);
+
 }
 
-li::before {
-    content: "Task " counter(myCount) " -:";
-    counter-increment: myCount 1;
+.input{
+  
+   outline: none;
+  
+}
+.input:focus {
+    /* outline:none; */
+    border: rgb(255, 0, 115) 1px solid;
+    box-shadow: rgb(255, 0, 0) 0 0 3px 1px ;
+  }
+
+  .pending_task li{
+      border-radius: 900px;
+      padding:0.5rem 1rem;
+     background-color: rgb(244, 244, 143);
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+  }
+  .pending_task{
+      padding:0;
+  }
+  .pending_task li::before{
+        content: counter(pending) ;
+        counter-increment: pending 1;
+        font-weight: bolder;
+  }
+  .value{
+    margin: 0 1rem;
+      word-break: break-all;
+  }
+
+  .completed_task li{   
+    list-style-type:none;
+    word-break: break-all;
+  }
+
+.completed_task_heading{
+    font-size: 1.5rem;
+    font-weight: bold
 }
 
-li {
-
-    display: flex;
-    list-style-type: none;
-    font-size: larger;
-    margin: 1.5rem 0;
-}
-
-li div {
+.delete{
     font-weight: bolder;
-}
-
-.deleteAll {
-    font-size: large;
-    border: 1px black solid;
-    margin-left: 1rem;
-    border-radius: 5px;
+    border-radius: 50%;
+    border: 2px red solid;
     cursor: pointer;
 }
 
-.delete {
-    font-weight: bolder;
-    width: 2rem;
-   
-    border: 1px solid black;
-    background: none;
-   background-color: white;
-    border-radius: 5px;
-    margin-left: 10px;
-    padding: 5px;
-}
+
+
 
 .done{
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px rgb(51, 255, 0) solid;
+    cursor: pointer;
+
+}
+
+.completed_task_heading{
+    color: white;
+    padding:.5rem;
+    background-color: rgb(246, 70, 70);
+    border-radius: 900px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.completed_task{
+    padding: 0;
+    margin:0;
+}
+.completed_task li{
     font-weight: bolder;
-    width: 2rem;
-   
-    border: 1px solid black;
-    background: none;
-   background-color: white;
-    border-radius: 5px;
-    margin-left: 10px;
-    padding: 5px;
+    border-radius: 900px;
+  
+    padding:0.5rem 1rem;
+    background-color: rgb(117, 240, 144);
+    list-style-type: none;
+    
+}
+
+
+.task_button{
+    display: flex;
 }
