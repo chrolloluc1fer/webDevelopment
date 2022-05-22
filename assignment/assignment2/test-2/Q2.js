@@ -9,17 +9,49 @@ let obj = {
   length: 5,
 };
 
-function f() {
-  for (let i = 1; i < obj.length; i++) {
-    obj[i] = obj[i] + 1;
-  }
-  delete obj["length"];
-  for (let x in obj) {
-    console.log(`at index ${x} we have value ${obj[x]}`);
-  }
+// function f() {
+//   for (let i = 1; i < obj.length; i++) {
+//     obj[i] = obj[i] + 1;
+//   }
+//   delete obj["length"];
+//   for (let x in obj) {
+//     console.log(`at index ${x} we have value ${obj[x]}`);
+//   }
+// }
+
+// f();
+
+
+// function f(){
+//   let nobj = {};
+//   for(let i = 1; i <= obj.length;i++){
+//     nobj[i] = obj[i] + 1;
+//   }
+//   for(x in nobj){
+//   console.log(`at index ${x} we have value ${nobj[x]}`);
+//   }
+// }
+
+// f();
+
+function g(obj ,cb){
+  let nobj = cb(obj);
+  for(x in nobj){
+    console.log(`at index ${x} we have value ${nobj[x]}`);
+    }
 }
 
-f();
+
+function cb(x){
+  let nobj={};
+  for(let i = 1; i <= x.length;i++){
+    nobj[i] = x[i] + 1;
+  }
+  return nobj;
+}
+
+g(obj,cb);
+
 
 // Solution:
 

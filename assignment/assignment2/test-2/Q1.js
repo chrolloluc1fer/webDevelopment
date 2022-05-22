@@ -9,11 +9,11 @@ function f(arr) {
     return arr;
 }
 
-console.log(arr);
+// console.log(arr);
 
-console.log(f(arr));
+// console.log(f(arr));
 
-console.log(arr);
+// console.log(arr);
 
 
 // Solution:
@@ -23,3 +23,17 @@ console.log(arr);
 //     let nArr = arr.map(function(e){return 0})
 //     return nArr;
 // }
+
+function g(arr){
+    let narr=[];
+    for(x in arr){
+        narr[x]= 0;
+    }
+    return narr;
+}
+
+console.log(arr);
+
+console.log(g(arr));
+
+console.log(arr);

@@ -9,7 +9,7 @@ arr.map(function (e) {
 (function () {
   arr.filter(function () {});
 })();
-
+  
 console.log(arr);
 
 let nArr;

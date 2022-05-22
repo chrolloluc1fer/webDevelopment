@@ -34,6 +34,6 @@ function transducer(arr, fFn, mFn) {
 // 4) None
 
 // Solution:
-// 3
+// 3 yes
 
 
