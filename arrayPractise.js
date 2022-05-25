@@ -41,7 +41,7 @@ const minified = characters.map((character)=> ({name:character.name,height:chara
 console.log(minified);
 //4. Get array of all first names
 const names = characters.map((character)=> character.name.split(" ")[0]);
-console.log(names);
+console.log(names)
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
