@@ -1,5 +1,7 @@
 //Q create a polyfill of reduce
 
+
+
 // Solution:
 
 function reduce(arr, reducer) {

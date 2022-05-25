@@ -120,6 +120,6 @@ setTimeout(function(){
 
 
 let count = 1;
-while(true){
-    console.log(count++);
-}
+    while(true){
+        console.log(count++);
+    }
