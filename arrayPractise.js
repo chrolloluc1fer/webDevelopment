@@ -31,17 +31,22 @@ const characters = [
 
 //***MAP***
 //1. Get array of all names
-const name = characters.map((character) => character.name)
+// const name = characters.map((character) => character.name)
 // console.log(name);
 //2. Get array of all heights
-const height = characters.map((character)=> character.height)
+// const height = characters.map((character)=> character.height)
 // console.log(height)
 //3. Get array of objects with just name and height properties
-const minified = characters.map((character)=> ({name:character.name,height:character.height}))
-console.log(minified);
+// const minified = characters.map((character)=> ({name:character.name,height:character.height}))
+// console.log(minified);
 //4. Get array of all first names
-const names = characters.map((character)=> character.name.split(" ")[0]);
-console.log(names)
+// const names = characters.map((character)=> character.name.split(" ")[0]);
+// console.log(names)
+
+const ht = characters.filter((character)=>(character.height > 200)).map(character=>{
+    return ({name:character.name,height:character.height});
+});
+console.log(ht);
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
