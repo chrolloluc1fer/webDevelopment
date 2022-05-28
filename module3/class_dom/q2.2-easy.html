@@ -27,7 +27,25 @@
     </p>
     <script>
       // Q write a script which on single clicking of above p tags highlights them with red, double clicking highlights them with green and on triple removes the highlights.
-
+        let allP = document.querySelectorAll("p")
+        allP.forEach(p=>{
+          p.addEventListener("click",()=>{
+            p.style.color="red";
+          })
+        })
+        allP.forEach(p=>{
+          p.addEventListener("dblclick",()=>{
+            p.style.color="green";
+          })
+        })
+        allP.forEach(p=>{
+          p.addEventListener("click",(e)=>{
+            if(e.detail === 3){
+              p.style.color="black"
+            }
+            
+          })
+        })
       //   Solution:
     </script>
   </body>

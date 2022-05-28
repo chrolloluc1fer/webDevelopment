@@ -42,7 +42,13 @@
     </div>
     <script>
       //  Q Create a generic function to select all sibling of a given node. Using that function delete all siblings of red card
-
+        let all = document.querySelectorAll(".card")
+        all.forEach(item=>{         
+            if(item.classList.contains("red"))
+            {
+              item.remove();
+            }
+          })
       //   Solution:
     </script>
   </body>
