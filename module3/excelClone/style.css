@@ -95,7 +95,10 @@
     top:30px;
     left:30px;
 }
-
+.address-content{
+    display: flex;
+    align-items: center;
+}
 #address{
     text-align: center;
     font-size:large;
