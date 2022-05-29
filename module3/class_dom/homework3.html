@@ -78,11 +78,47 @@
     <label for="marks">Marks:
       <input type="number" id="marks" />
     </label>
-    <input type="submit" value="Submit" />
+    <input type="submit" id="input" value="Submit" />
   </form>
   <script>
       // Q Write a script which takes the entry from the form and add it into the table
+      const names   = document.querySelector("#name")
+      const mark   = document.querySelector("#marks")
+      const submit = document.querySelector("#input")
+      const tbody  = document.querySelector("tbody")
+      const tcol = document.querySelectorAll("tr")
+     
+      let n ="";
+      let m =0;
+      names.addEventListener("keyup",()=>{
+        n = names.value;
+       
+      })
       
+      mark.addEventListener("keyup",()=>{
+        m = mark.value;
+       
+      })
+      submit.addEventListener("click",()=>{
+        let col = document.createElement("tr");
+          col.innerHTML=` <td>${tcol.length}</td>
+        <td>${"Shubham"}</td>
+        <td>${21}</td>`
+        tbody.appendChild(col);
+      })
+
+
+      function makecol(name,value){
+        let col = document.createElement("tr");
+          col.innerHTML=` <td>${tcol.length}</td>
+        <td>${name}</td>
+        <td>${value}</td>`
+        tbody.appendChild(col);
+      }
+
+
+    
+
       
   </script>
 </body>
