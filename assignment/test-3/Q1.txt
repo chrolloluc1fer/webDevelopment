@@ -13,3 +13,5 @@ let cloned = objectToClone
 // 3) None
 // 4) B 
 
+
+// answer = A
