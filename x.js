@@ -33,5 +33,7 @@ setTimeout(function () {
 
 
 
+let obj = {Name:"Shubham",class:12}
 
+console.log(obj['Name'])
 
