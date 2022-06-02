@@ -37,41 +37,27 @@
   <script>
     // Q Make a loading animation using the above 5 balls and JS
     
-      // function fn(idx) {
-      //   let divs = document.querySelectorAll(".ball");
-      //   idx = idx%5;
-      //   divs[idx].style.opacity = "0";
-      //   if(idx==0) {
-      //     divs[divs.length-1].style.opacity = "1";
-      //   } else {
-      //     divs[idx-1].style.opacity = "1";
-      //   }
-      //   setTimeout(function(){
-      //     fn(idx+1);
-      //   },500)
-      // }
-      // fn(0);
-
-        //my implementation
-
-        function animation(idx){
-          let divs = document.querySelectorAll(".ball");
-          idx = idx % divs.length;
-          divs[idx].style.opacity = "0";
-          if(idx == 0){
-            divs[divs.length - 1].style.opacity = "1";
-          }else{
-            divs[idx - 1].style.opacity = "1";
-          }
-
-          setTimeout(function(){
-            animation(idx + 1)
-          },500);
-        }
-        animation(0)
-
+      
 
       // Solution:
+          function animation(idx){
+            let divs = document.querySelectorAll(".ball")
+            idx = idx % divs.length;
+            divs[idx].style.opacity="0";
+            if(idx == 0){
+              divs[divs.length - 1].style.opacity="1"
+            }
+            else{
+              divs[idx - 1].style.opacity ="1";
+            }
+            setTimeout(()=>{
+              animation(idx + 1);
+            },1000)
+           
+          }
+
+          animation(0);
+
   </script>
 </body>
 
