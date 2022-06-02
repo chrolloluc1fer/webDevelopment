@@ -1,2 +1,13 @@
 Q- Create a function which deep clones the object 
 
+let obj = {
+  name:"shubham",
+  class:"12",
+  address:{Houseno:33,GaliNo:11}
+    }
+
+let nobj = JSON.parse(JSON.stringify(obj))
+nobj.name="shilpi"
+nobj.address.Houseno=12
+    console.log("old object = ",obj);
+    console.log("new Object = " ,nobj );
