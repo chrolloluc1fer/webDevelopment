@@ -5,7 +5,7 @@
 }
 
 .menu-options{
-    border: 0.5px solid;
+    border: 0.5px solid #eae5e5;
     height: 30px;
     /* display: flex; */
 }
@@ -13,7 +13,7 @@
 
 
 .address-content{
-    border: 0.5px solid;
+    border: 0.5px solid #aba8a8;
     height: 30px;
 }
 
@@ -35,18 +35,18 @@
 
 .cell{
     outline: none;
-    border: 0.2px solid gray;
+    border: 0.01px solid #dedbdb;
     min-height: 30px;
     width: 100px;
     padding:0.2rem;
 }
 
 .top-left-cell{
-    border-right: 0.1px solid gray;
-    border-bottom: 0.1px solid gray;
+    border-right: 0.01px solid gray;
+    border-bottom: 0.01px solid gray;
     height: 30px;
     width: 30px;
-    background-color: lightgrey;
+    background-color: #eae5e5;
     position: absolute;
     z-index: 50;
 
@@ -56,7 +56,7 @@
     display: flex;
     position: absolute;
     
-    background-color: lightgrey;
+    background-color: #eae5e5;
     left: 30px;
     z-index: 20;
 
@@ -66,15 +66,15 @@
 .top-row-cell{
     height: 30px;
     width: 100px;
-    border-bottom: 0.1px solid gray;
-    border-left: 0.1px solid gray;
+    border-bottom: 0.01px solid gray;
+    border-left: 0.01px solid gray;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .left-col{
-    background-color: lightgrey;
+    background-color: #eae5e5;
     position: absolute;
     left: 0px;
     top:30px;
@@ -94,15 +94,22 @@
     position: absolute;
     top:30px;
     left:30px;
+ 
 }
+
+
 .address-content{
     display: flex;
     align-items: center;
 }
 #address{
+    margin:0 2rem;
     text-align: center;
     font-size:large;
     width: 60px;
 }
 
 
+.cell:focus{
+    border:rgb(38, 255, 0) 2px solid;
+}

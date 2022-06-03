@@ -49,6 +49,7 @@ function initDb(){
             row.push(cellObject);
         }
         db.push(row);
+        
     }
 }
 initDb();

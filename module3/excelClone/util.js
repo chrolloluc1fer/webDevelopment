@@ -1,4 +1,4 @@
-function solveFormula(formula,selfCellObject){
+function solveFormula(formula,lastClickedObject){
     //formula = (A1 + B2 + 2 - C3)
     let formulaComps = formula.split(" ");
     //formulaComps = [A1,+,B2,+,2,-,C3];
@@ -8,11 +8,11 @@ function solveFormula(formula,selfCellObject){
             let {rowId,colId} = getRowIdColIdFromAddress(formulaComp);
             let cellObject = db[rowId][colId];
             let value = cellObject.value;
-            if(selfCellObject){
-                cellObject.children.push(selfCellObject.name);
-                selfCellObject.parent.push(cellObject.name);
+            if(lastClickedObject){
+                cellObject.children.push(lastClickedObject.name);
+                lastClickedObject.parent.push(cellObject.name);
             }
-                console.log(cellObject);
+                
             formula = formula.replace(formulaComp,value);
         }
     }

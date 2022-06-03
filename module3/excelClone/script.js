@@ -19,7 +19,7 @@ for(let i=0;i<allCells.length;i++){
     allCells[i].addEventListener("click",function(e){
         let rowId = Number(e.target.getAttribute("rowid"));
         let colId = Number(e.target.getAttribute("colid"));
-        let address = String.fromCharCode(65+colId)+(rowId+1)+"";
+        let address = String.fromCharCode(65+colId)+" "+(rowId+1)+"";
         // console.log(address);
         let cellObject = db[rowId][colId];
         addressInput.value = address;
@@ -36,7 +36,6 @@ for(let i=0;i<allCells.length;i++){
             return;
         }
         cellObject.value = cellValue;
-        console.log("After UPdate",cellObject);
         updateChildren(cellObject);
     })
 
@@ -66,7 +65,7 @@ formulaInput.addEventListener("blur",function(e){
         if(cellObject.formula){
             removeFormula(cellObject);
         }
-        let computedValue = solveFormula(formula,cellObject); // will implement in next commit
+        let computedValue = solveFormula(formula,cellObject); 
         //update db
         cellObject.value = computedValue;
         cellObject.formula = formula;
