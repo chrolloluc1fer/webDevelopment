@@ -41,7 +41,19 @@ let url3 = 'todos/3.json'
 
 
 
-getToDos(url1).then((data)=>{
+
+// p.then(onFulfilled[, onRejected]);
+
+// p.then(value => {
+//   // fulfillment
+// }, reason => {
+//   // rejection
+// });
+
+
+
+
+getToDos(url1).then(null,(data)=>{
     console.log(data);
     return getToDos(url2)
 }).then((data)=>{
