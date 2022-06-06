@@ -27,7 +27,15 @@
 
 
       //by queryselector
-      
+      let div = document.querySelector("div");
+      function fn(d) {
+        if(d.children.length>0) {
+          fn(d.children[0]);
+        } else {
+          d.remove();
+        }
+      }
+      fn(div);
       
 
 
