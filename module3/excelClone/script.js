@@ -19,12 +19,21 @@ for(let i=0;i<allCells.length;i++){
     allCells[i].addEventListener("click",function(e){
         let rowId = Number(e.target.getAttribute("rowid"));
         let colId = Number(e.target.getAttribute("colid"));
-        let address = String.fromCharCode(65+colId)+" "+(rowId+1)+"";
+        let address = String.fromCharCode(65+colId)+(rowId+1)+"";
         // console.log(address);
         let cellObject = db[rowId][colId];
         addressInput.value = address;
         //update UI
         formulaInput.value = cellObject.formula;
+        
+        cellObject.fontStyle.bold?document.querySelector(".bold").classList.add("active-font-style"):
+        document.querySelector(".bold").classList.remove("active-font-style");
+
+        cellObject.fontStyle.italic?document.querySelector(".italic").classList.add("active-font-style"):
+        document.querySelector(".italic").classList.remove("active-font-style");
+
+        cellObject.fontStyle.underline?document.querySelector(".underline").classList.add("active-font-style"):
+        document.querySelector(".underline").classList.remove("active-font-style");
     })
 
     allCells[i].addEventListener("blur",function(e){
@@ -36,7 +45,13 @@ for(let i=0;i<allCells.length;i++){
             return;
         }
         cellObject.value = cellValue;
+        console.log("After UPdate",cellObject);
         updateChildren(cellObject);
+        if(cellObject.visited){
+            return;
+        }
+        cellObject.visited = true;
+        visitedCells.push({"rowId":rowId,"colId":colId});
     })
 
     allCells[i].addEventListener("keydown",function(e){
@@ -65,7 +80,7 @@ formulaInput.addEventListener("blur",function(e){
         if(cellObject.formula){
             removeFormula(cellObject);
         }
-        let computedValue = solveFormula(formula,cellObject); 
+        let computedValue = solveFormula(formula,cellObject); // will implement in next commit
         //update db
         cellObject.value = computedValue;
         cellObject.formula = formula;
@@ -73,4 +88,4 @@ formulaInput.addEventListener("blur",function(e){
         lastSelectedCell.textContent = computedValue;
         updateChildren(cellObject);
     }
-})
+})  

@@ -31,10 +31,12 @@ function initCells(){
 
 initCells();
 
-let db;
+let sheetsDB = [];
+let db; //[[{},{},{}......{}],[[{},{},{}......{}],[[{},{},{}......{}]]
+let visitedCells;
 
 function initDb(){
-    db = [];
+    let newSheetDB = [];
     for(let i=0;i<100;i++){
         let row = [];
         for(let j=0;j<26;j++){
@@ -44,13 +46,18 @@ function initDb(){
                 value:"",
                 formula:"",
                 children:[],
-                parent:[]
+                parent:[],
+                visited:false,
+                fontStyle:{bold:false,italic:false,underline:false}
             }
             row.push(cellObject);
         }
-        db.push(row);
-        
+        newSheetDB.push(row);
     }
+    visitedCells = [];
+    db = newSheetDB;
+    sheetsDB.push({db:newSheetDB,visitedCells:visitedCells});
+    console.log(sheetsDB);
 }
 initDb();
 
