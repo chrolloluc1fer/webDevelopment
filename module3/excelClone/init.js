@@ -57,8 +57,7 @@ function initDb(){
     visitedCells = [];
     db = newSheetDB;
     sheetsDB.push({db:newSheetDB,visitedCells:visitedCells});
-    console.log(sheetsDB);
+   
 }
 initDb();
 
-console.log(db);
