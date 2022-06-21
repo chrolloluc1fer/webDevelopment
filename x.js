@@ -1,38 +1,14 @@
-// find output:
+let obj = {name:"shubham",
+  address:{
+    house:33,
+    gali:12
+  }  
+}
 
-let obj = {
-    a: {
-      b: { e: { string: "string" } },
-      c: { boolean: true },
-    },
-    d: {
-      f: {
-        g: {
-          h: { null: null },
-          i: { undefined: "defined" },
-        },
-      },
-    },
-  };
-  
-  let {
-    a: {
-      b: {
-        e: { string },
-      },
-    },
-  } = obj;
-  
-  let {
-    d: {
-      f: {
-        g: {
-          i: { undefined },
-        },
-      },
-    },
-  } = obj;
-  console.log(string)
-  console.log(`${string}`);
-  
-  
+
+let obj2 = JSON.parse(JSON.stringify(obj))
+obj2.address.gali = 13
+
+
+console.log(obj)
+console.log(obj2);
