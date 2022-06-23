@@ -112,3 +112,8 @@
   top:2%;
   color:white;
 }
+
+.footer{
+  display: flex;
+  justify-content: center;
+}

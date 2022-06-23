@@ -1,15 +1,19 @@
 import { Component } from "react";
-
+import {movies} from "../movieData";
+let url = "https://image.tmdb.org/t/p/original/";
 
 class Banner extends Component {
     render() {
+
+        let movie = movies.results[Math.floor(Math.random() * 10)]
+        let backdrop_path = movie.backdrop_path;
         return (
            
                 <div className="card banner-card">
-                    <img src="https://assets.reedpopcdn.com/digitalfoundry-2020-marvels-spider-man-miles-morales-tech-analysis-1604663057480.jpg/BROK/thumbnail/1600x900/quality/100/digitalfoundry-2020-marvels-spider-man-miles-morales-tech-analysis-1604663057480.jpg" className="card-img-top banner-img" alt="..."/>
+                    <img src={`${url}${backdrop_path}`} className="card-img-top banner-img" alt="..."/>
                 
-                            <h1 className="card-title banner-title">Spider Man</h1>
-                            <p className="card-text banner-text">Spider-Man is a superhero appearing in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books. He has since been featured in films, television shows, video games, and plays. Spider-Man is the alias of Peter Parker, an orphan raised by his Aunt May and Uncle Ben in New York City after his parents Richard and Mary Parker died in a plane crash</p>
+                            <h1 className="card-title banner-title">{movie.original_title}</h1>
+                            <p className="card-text banner-text">{movie.overview}</p>
                 </div>
           
         )
