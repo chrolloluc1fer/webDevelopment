@@ -1,6 +1,7 @@
 import { Component } from "react";
 import {movies} from "../movieData"
 
+let url = "https://image.tmdb.org/t/p/original/"
 class MovieList extends Component{
     render(){
         let moviesArr = movies.results
@@ -15,11 +16,11 @@ class MovieList extends Component{
                 {moviesArr.map((movieEle)=>(     
                  
                     <div className="card movie-card">
-                         <img src="https://static.toiimg.com/thumb/msid-91984351,width-1280,height-720,resizemode-4/.jpg" className="card-img-top" alt="..."/>
+                         <img src={`${url}${movieEle.backdrop_path}`} className="card-img-top" alt="..."/>
                          <div className="card-body">
                          <h5 className="card-title">{movieEle.original_title}</h5>
-                          <p className="card-text">{movieEle.overview}</p>
-                         <a href="#" className="btn btn-primary">Go somewhere</a>
+                         <p className="card-text">{movieEle.overview}</p>
+                         <div className="fav-btn" ><a href="#" className="btn btn-primary">Add to favourite</a></div>
                          </div>
                     </div>
                     

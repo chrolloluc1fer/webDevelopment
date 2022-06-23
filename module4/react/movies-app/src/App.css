@@ -81,7 +81,34 @@
 
 .movie-card{
   width: 18rem;
-  height: 25rem;
+  height: 24rem;
   overflow: hidden;
   margin: 2rem 2rem;
+}
+
+.movie-list{
+  position: relative;
+
+
+}
+
+
+.fav-btn{
+  display: none;
+  position: absolute;
+  top:80%;
+  left:50%;
+}
+.btn-primary{
+  transform: translateX(-50%);
+}
+
+.movie-card:hover .fav-btn{
+  display: block;
+}
+
+.card-title{
+  position: absolute;
+  top:2%;
+  color:white;
 }
