@@ -86,6 +86,11 @@
 }
 
 .movies-button{
+  display:none;
   position: absolute;
   bottom: 2rem;
+}
+
+.movie-card:hover .movies-button{
+display: block;
 }

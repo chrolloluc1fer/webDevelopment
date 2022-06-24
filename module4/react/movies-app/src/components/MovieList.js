@@ -6,7 +6,7 @@ class MovieList extends Component {
     constructor(){
         super();
         this.state={
-            hover:"",
+         
             pArr :[1],
             movies:[],
             currPage:1
@@ -14,19 +14,21 @@ class MovieList extends Component {
     }
 
     async componentDidMount(){
-        console.log("Component Did Mount");
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
-        console.log(res.data);
+      
+        const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
+        const data = await res.json()
+        console.log(data)
         this.setState({
-            movies:[...res.data.results]
+            movies:[...data.results]
         })
     }
 
     changeMovies = async()=>{
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
-        console.log(res.data);
+        const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
+        const data = await res.json()
+       
         this.setState({
-            movies:[...res.data.results]
+            movies:[...data.results]
         })
     }
 
@@ -38,8 +40,7 @@ class MovieList extends Component {
     }
 
     render() {
-        console.log("rednered");
-        // let moviesArr = movies.results
+      
         return (
             <>
                 <div>
@@ -47,12 +48,11 @@ class MovieList extends Component {
                 </div>
                 <div className="movies-list">
                     {this.state.movies.map((movieEle) => (
-                        <div className="card movie-card" onMouseEnter={()=>this.setState({hover:movieEle.id})} onMouseLeave={()=>this.setState({hover:""})} >
+                        <div className="card movie-card">
                             <img src={`https://image.tmdb.org/t/p/original${movieEle.backdrop_path}`} style={{ height: '40vh', width: '20vw' }} className="card-img-top movie-img" alt="..." />
                             <h5 className="card-title movie-title">{movieEle.title}</h5>
                             <div style={{ display: 'flex', justifyContent: "center" }}>
-                                {this.state.hover == movieEle.id && (
-                                <a href="#" type="button" className="btn btn-primary movies-button">Add to Favourites</a>)}
+                               <a href="#" type="button" className="btn btn-primary movies-button">Add to Favourites</a>
                             </div>
                         </div>
                     ))}
