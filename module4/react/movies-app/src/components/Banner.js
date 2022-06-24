@@ -10,7 +10,7 @@ class Banner extends Component {
         }
     }
     async componentDidMount(){
-        let res = await axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=81242a2aa2066e052c78ec9ac1700c59');
+        let res = await axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=e2391a84d2ccebf4c064f6c24e616037');
         console.log("Banner");
         console.log(res);
         this.setState({

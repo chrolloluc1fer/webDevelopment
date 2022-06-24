@@ -15,7 +15,7 @@ class MovieList extends Component {
 
     async componentDidMount(){
         console.log("Component Did Mount");
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=81242a2aa2066e052c78ec9ac1700c59&language=en-US&page=${this.state.currPage}`)
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
         console.log(res.data);
         this.setState({
             movies:[...res.data.results]
@@ -23,7 +23,7 @@ class MovieList extends Component {
     }
 
     changeMovies = async()=>{
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=81242a2aa2066e052c78ec9ac1700c59&language=en-US&page=${this.state.currPage}`)
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
         console.log(res.data);
         this.setState({
             movies:[...res.data.results]
