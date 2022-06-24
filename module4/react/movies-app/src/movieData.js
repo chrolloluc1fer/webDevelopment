@@ -9,7 +9,7 @@ export const movies = {
         original_language: "en",
         original_title: "Jurassic Hunt",
         overview:
-          "Female adventurer Parker joins a crew of male trophy hunters in a remote wilderness park. Their goal: slaughter genetically recreated dinosaurs for sport using rifles, arrows, and grenades.",
+          "Female adventurer Parker joins a crew of male trophy hunters in a remote wilderness park. Their goal: slaughter genetically recreated dinosaurs for sport using rifles, arrows, and grenades. After their guide is killed by raptors, the team tries to escape the park – but the hunters quickly become the hunted. Even worse, the park’s manager suspects Parker of being a spy and sends a hit squad after her. This battle’s about to become primitive!",
         popularity: 4475.053,
         poster_path: "/Czhr00kB8awffakEcQS5ON1ELm.jpg",
         release_date: "2021-08-23",
@@ -43,7 +43,7 @@ export const movies = {
         original_language: "en",
         original_title: "Don't Breathe 2",
         overview:
-          "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire..",
+          "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire. Their quiet life together is shattered when a group of criminals kidnap the girl, forcing the Blind Man to leave his safe haven to save her.",
         popularity: 3048.408,
         poster_path: "/hRMfgGFRAZIlvwVWy8DYJdLTpvN.jpg",
         release_date: "2021-08-12",
@@ -60,7 +60,7 @@ export const movies = {
         original_language: "en",
         original_title: "The Tomorrow War",
         overview:
-          "The world is stunned when a group of time travelers arrive from the year 2051 to deliver an urgent message: Thirty years in the future.",
+          "The world is stunned when a group of time travelers arrive from the year 2051 to deliver an urgent message: Thirty years in the future, mankind is losing a global war against a deadly alien species. The only hope for survival is for soldiers and civilians from the present to be transported to the future and join the fight. Among those recruited is high school teacher and family man Dan Forester. Determined to save the world for his young daughter, Dan teams up with a brilliant scientist and his estranged father in a desperate quest to rewrite the fate of the planet.",
         popularity: 3266.921,
         poster_path: "/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg",
         release_date: "2021-09-03",
@@ -77,7 +77,7 @@ export const movies = {
         original_language: "en",
         original_title: "The Suicide Squad",
         overview:
-          "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret,  enemy-infused island of Corto Maltese.",
+          "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
         popularity: 3168.796,
         poster_path: "/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
         release_date: "2021-07-28",
@@ -94,7 +94,7 @@ export const movies = {
         original_language: "en",
         original_title: "SAS: Red Notice",
         overview:
-          "An off-duty SAS soldier, Tom Buckingham, must thwart a terror attack on a train running through the Channel Tunnel. As the action escalates on the train",
+          "An off-duty SAS soldier, Tom Buckingham, must thwart a terror attack on a train running through the Channel Tunnel. As the action escalates on the train, events transpire in the corridors of power that may make the difference as to whether Buckingham and the civilian passengers make it out of the tunnel alive.",
         popularity: 2933.874,
         poster_path: "/6Y9fl8tD1xtyUrOHV2MkCYTpzgi.jpg",
         release_date: "2021-08-11",
@@ -128,7 +128,7 @@ export const movies = {
         original_language: "en",
         original_title: "Jungle Cruise",
         overview:
-          "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal.",
+          "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal – a discovery that will change the future of medicine.",
         popularity: 2422.668,
         poster_path: "/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg",
         release_date: "2021-07-28",
@@ -179,7 +179,7 @@ export const movies = {
         original_language: "es",
         original_title: "Sinaliento",
         overview:
-          "In the DR, hardened cop Manolo tries to take down an infamous drug cartel; meanwhile, his daughter has fallen in love with Lorenzo.",
+          "In the DR, hardened cop Manolo tries to take down an infamous drug cartel; meanwhile, his daughter has fallen in love with Lorenzo, a construction worker who's unwittingly gotten embroiled in the drug cartel's dealings.",
         popularity: 1705.286,
         poster_path: "/oxNoVgbu2v9ETL93Kri1pw8osYf.jpg",
         release_date: "2021-08-11",
@@ -196,7 +196,7 @@ export const movies = {
         original_language: "en",
         original_title: "Black Widow",
         overview:
-          "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. ",
+          "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
         popularity: 2110.202,
         poster_path: "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
         release_date: "2021-07-07",
@@ -230,7 +230,7 @@ export const movies = {
         original_language: "en",
         original_title: "Mortal Kombat Legends: Battle of the Realms",
         overview:
-          "The Earthrealm heroes must journey to the Outworld and fight for the survival of their homeland, invaded by the forces of evil warlord Shao Kahn.",
+          "The Earthrealm heroes must journey to the Outworld and fight for the survival of their homeland, invaded by the forces of evil warlord Shao Kahn, in the tournament to end all tournaments: the final Mortal Kombat.",
         popularity: 1777.011,
         poster_path: "/ablrE8IbWcIrAxMmm4gnPn75AMS.jpg",
         release_date: "2021-08-30",
@@ -247,7 +247,7 @@ export const movies = {
         original_language: "en",
         original_title: "Space Jam: A New Legacy",
         overview:
-          "When LeBron and his young son Dom are trapped in a digital space by a rogue A.I., LeBron must get them home safe by leading Bugs",
+          "When LeBron and his young son Dom are trapped in a digital space by a rogue A.I., LeBron must get them home safe by leading Bugs, Lola Bunny and the whole gang of notoriously undisciplined Looney Tunes to victory over the A.I.'s digitized champions on the court. It's Tunes versus Goons in the highest-stakes challenge of his life.",
         popularity: 1854.026,
         poster_path: "/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg",
         release_date: "2021-07-08",
@@ -298,7 +298,7 @@ export const movies = {
         original_language: "en",
         original_title: "Infinite",
         overview:
-          "Evan McCauley has skills he never learned and memories of places he has never visited. Self-medicated and on the brink of a mental breakdown",
+          "Evan McCauley has skills he never learned and memories of places he has never visited. Self-medicated and on the brink of a mental breakdown, a secret group that call themselves “Infinites” come to his rescue, revealing that his memories are real.",
         popularity: 1557.1,
         poster_path: "/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg",
         release_date: "2021-06-10",
@@ -315,7 +315,7 @@ export const movies = {
         original_language: "en",
         original_title: "Luca",
         overview:
-          "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret:",
+          "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
         popularity: 1480.653,
         poster_path: "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
         release_date: "2021-06-17",
@@ -332,7 +332,7 @@ export const movies = {
         original_language: "en",
         original_title: "After We Fell",
         overview:
-          "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. ",
+          "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. The only person that she should be able to rely on is Hardin, who is furious when he discovers the massive secret that she's been keeping. Before Tessa makes the biggest decision of her life, everything changes because of revelations about her family.",
         popularity: 1232.869,
         poster_path: "/oOZITZodAja6optBgLh8ZZrgzbb.jpg",
         release_date: "2021-09-01",

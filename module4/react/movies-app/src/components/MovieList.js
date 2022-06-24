@@ -1,48 +1,77 @@
 import { Component } from "react";
-import {movies} from "../movieData"
+// import { movies } from "../movieData"
+import axios from 'axios'
 
-let url = "https://image.tmdb.org/t/p/original/"
-class MovieList extends Component{
-    render(){
-        let moviesArr = movies.results
-        return(
-            <>   
-            <div>
-                <h2 className="text-center trending">
-                    <strong>Trending</strong>
-                </h2>
-            </div>
-                <div className="movie-list">
-                {moviesArr.map((movieEle)=>(     
-                 
-                    <div className="card movie-card">
-                         <img src={`${url}${movieEle.backdrop_path}`} className="card-img-top" alt="..."/>
-                         <div className="card-body">
-                         <h5 className="card-title">{movieEle.original_title}</h5>
-                         <p className="card-text">{movieEle.overview}</p>
-                         <div className="fav-btn" ><a href="#" className="btn btn-primary">Add to favourite</a></div>
-                         </div>
-                    </div>
-                    
-                  
-                ))}
+class MovieList extends Component {
+    constructor(){
+        super();
+        this.state={
+            hover:"",
+            pArr :[1],
+            movies:[],
+            currPage:1
+        };
+    }
 
+    async componentDidMount(){
+        console.log("Component Did Mount");
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=81242a2aa2066e052c78ec9ac1700c59&language=en-US&page=${this.state.currPage}`)
+        console.log(res.data);
+        this.setState({
+            movies:[...res.data.results]
+        })
+    }
 
-          </div>
-          <div class="footer">
-              <nav aria-label="Page navigation example">
-                <ul className="pagination">
-                    <li className="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li className="page-item"><a class="page-link" href="#">1</a></li>
-                    <li className="page-item"><a class="page-link" href="#">2</a></li>
-                    <li className="page-item"><a class="page-link" href="#">3</a></li>
-                    <li className="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
+    changeMovies = async()=>{
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=81242a2aa2066e052c78ec9ac1700c59&language=en-US&page=${this.state.currPage}`)
+        console.log(res.data);
+        this.setState({
+            movies:[...res.data.results]
+        })
+    }
+
+    handleNext=()=>{
+        this.setState({
+            pArr:[...this.state.pArr,this.state.pArr.length+1],
+            currPage:this.state.currPage+1
+        },this.changeMovies)
+    }
+
+    render() {
+        console.log("rednered");
+        // let moviesArr = movies.results
+        return (
+            <>
+                <div>
+                    <h3 className="text-center"><strong>Trending</strong></h3>
+                </div>
+                <div className="movies-list">
+                    {this.state.movies.map((movieEle) => (
+                        <div className="card movie-card" onMouseEnter={()=>this.setState({hover:movieEle.id})} onMouseLeave={()=>this.setState({hover:""})} >
+                            <img src={`https://image.tmdb.org/t/p/original${movieEle.backdrop_path}`} style={{ height: '40vh', width: '20vw' }} className="card-img-top movie-img" alt="..." />
+                            <h5 className="card-title movie-title">{movieEle.title}</h5>
+                            <div style={{ display: 'flex', justifyContent: "center" }}>
+                                {this.state.hover == movieEle.id && (
+                                <a href="#" type="button" className="btn btn-primary movies-button">Add to Favourites</a>)}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div style={{display:"flex",justifyContent:"center"}}>
+                <nav aria-label="Page navigation example">
+                    <ul className="pagination">
+                        <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                        {this.state.pArr.map((ele)=>(
+                            <li className="page-item"><a className="page-link" href="#">{ele}</a></li>
+                        ))}
+                        
+                        <li className="page-item"><a className="page-link" onClick={this.handleNext} >Next</a></li>
+                    </ul>
                 </nav>
-          </div>
+                </div>
             </>
         )
     }
 }
 
-export default MovieList 
+export default MovieList

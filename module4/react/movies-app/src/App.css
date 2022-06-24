@@ -13,12 +13,6 @@
   }
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -42,78 +36,56 @@
     transform: rotate(360deg);
   }
 }
-.navbar{
-  display: flex;
-
-}
 
 .banner-card{
+  width: 100vw;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
   position: relative;
-  width: 98vw;
-  margin: 0 1rem;
   height: 70vh;
 }
-.banner-title{
- position:absolute;
- color:white; 
- top:45vh;
- left:5vw;
-}
-.banner-text{
-  position:absolute;
-  color:white; 
-  width: 90vw;
-  top:55vh;
-  left:5vw;
-}
+
 .banner-img{
-  width: 100%;
+  width: 99%;
   height: 70vh;
 }
-.trending{
-  padding:2rem;
-}
-.movie-list{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-.movie-card{
-  width: 18rem;
-  height: 24rem;
-  overflow: hidden;
-  margin: 2rem 2rem;
-}
-
-.movie-list{
-  position: relative;
-
-
-}
-
-
-.fav-btn{
-  display: none;
+.banner-title{
   position: absolute;
-  top:80%;
-  left:50%;
-}
-.btn-primary{
-  transform: translateX(-50%);
-}
-
-.movie-card:hover .fav-btn{
-  display: block;
-}
-
-.card-title{
-  position: absolute;
-  top:2%;
+  top:45vh;
+  left:5vw;
   color:white;
 }
 
-.footer{
+.banner-text{
+  position: absolute;
+  color: white;
+  top:55vh;
+  left: 5vw;
+}
+
+.movies-list{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 1rem;
+}
+
+
+.movie-card{
+ position: relative; 
+ width: 20vw;
+ margin: 1rem;
+ color: white;
+}
+
+.movie-title{
+  position: absolute;
+  top:1rem;
+  left: 1rem;
+}
+
+.movies-button{
+  position: absolute;
+  bottom: 2rem;
 }
