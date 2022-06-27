@@ -86,11 +86,14 @@
 }
 
 .movies-button{
-  display:none;
   position: absolute;
   bottom: 2rem;
 }
 
-.movie-card:hover .movies-button{
-display: block;
+.genre-selector{
+  padding-top: 3rem;
 }
+
+.fav-table{
+padding-top:3rem;
+} 
