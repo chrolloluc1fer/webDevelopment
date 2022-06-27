@@ -17,7 +17,7 @@ class MovieList extends Component {
       
         const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=e2391a84d2ccebf4c064f6c24e616037&language=en-US&page=${this.state.currPage}`)
         const data = await res.json()
-        console.log(data)
+     
         this.setState({
             movies:[...data.results]
         })
@@ -53,15 +53,20 @@ class MovieList extends Component {
     }
 
     handleNext=()=>{
+        if(this.state.currPage != this.state.pArr.length){
+            this.setState({
+                currPage:this.state.currPage + 1
+            },this.changeMovies);
+        }
+        else{
         this.setState({
             pArr:[...this.state.pArr,this.state.pArr.length+1],
             currPage:this.state.currPage+1
-        },this.changeMovies)
+         },this.changeMovies)
+         }
     }
 
-    render() {
-        console.log("rednered");
-        
+    render() {        
         return (
             <>
                 <div>
