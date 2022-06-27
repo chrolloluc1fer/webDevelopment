@@ -68,7 +68,7 @@ class MovieList extends Component {
 
     render() {        
         return (
-            <>
+            <div className="movie-container">
                 <div>
                     <h3 className="text-center"><strong>Trending</strong></h3>
                 </div>
@@ -96,7 +96,7 @@ class MovieList extends Component {
                     </ul>
                 </nav>
                 </div>
-            </>
+            </div>
         )
     }
 }

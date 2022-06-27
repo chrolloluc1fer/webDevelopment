@@ -10,7 +10,7 @@ function App() {
       <NavBar/>
       <Banner/>
       <MovieList/> 
-      {/* <Fav/> */}
+      <Fav/>
     </>
     );
 }
