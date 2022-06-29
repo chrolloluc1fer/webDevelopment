@@ -98,15 +98,6 @@
 padding-top:3rem;
 } 
 
-.container{
-  display: none;
-}
-
-
-.container.active{
-  display: block;
-}
-
-.movie-container.block,.nav-bar.block, .banner-card.block{
-display: none;
+a{
+  text-decoration: none;
 }
