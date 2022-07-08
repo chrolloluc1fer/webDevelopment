@@ -31,6 +31,10 @@ On clicking of the color name change the background color of the div.container t
   </div>
   <script>
       // Solution:
+      let container = document.querySelector(".container").addEventListener("click",(e)=>{
+        e.currentTarget.style.background = e.target.classList[0];
+      });
+
     
   </script>
 </body>
