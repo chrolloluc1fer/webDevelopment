@@ -15,12 +15,23 @@
       saying hello ask the user for his/her name. -->
     <script>
       // Given Code :
-      let b = document.querySelector("button");
-      b.addEventListener("click", function () {
-        alert("Hello USER");
-      });
+      // let b = document.querySelector("button");
+      // b.addEventListener("click", function () {
+      //   alert("Hello USER");
+      // });
 
       //     Solution:
+     let user;
+        let b = document.querySelector("button");
+        b.addEventListener("click",function(){
+          alert("Hello User " + user);
+        })
+
+        b.addEventListener("click",()=>{
+          user = prompt("Your name")
+        },true)
+      
+
     </script>
   </body>
 </html>

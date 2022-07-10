@@ -45,12 +45,15 @@
     let ps = document.querySelectorAll("p");
     let container = document.querySelector(".container");
     for (let i = 0; i < ps.length; i++) {
-      ps[i].addEventListener("click", function () {
+      ps[i].addEventListener("click", function (e) {
+        // if(e.target == e.currentTarget)
+        e.stopPropagation()
         alert("p tag was clicked");
       });
     }
 
-    container.addEventListener("click", function () {
+    container.addEventListener("click", function (e) {
+        // if(e.target == e.currentTarget)
       alert("div tag was clicked");
     });
 
