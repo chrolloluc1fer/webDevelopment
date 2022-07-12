@@ -15,8 +15,43 @@
     2- Also able to add properties with property name and value as input -->
 
   <!-- Solution: -->
+<h3>New Element</h3>
+<input type="text" id="newEl">
+<h3>Property</h3>
+<input type="text" id="prop">
+<h3>Value</h3>
+<input type="text" id="value">
+<input type="submit" value="create"></input>
 
-  
+
 </body>
+
+<script>
+
+  let btn = document.querySelector("input[type='submit']")
+  btn.addEventListener("click",() =>{
+    let newEl  =  document.querySelector("#newEl").value;
+    let prop   =  document.querySelector("#prop").value;
+    let value  =  document.querySelector("#value").value;
+console.log(newEl,prop,value)
+
+      if(!newEl)
+      return
+      let ele =  document.createElement(newEl);
+      if(prop && value){
+        ele[prop] = value;
+      }
+      let body = document.querySelector("body")
+      
+      body.append(ele);
+      document.querySelector("#newEl").value="";
+      document.querySelector("#prop").value ="";
+      document.querySelector("#value").value="";
+
+  })
+let input =  document.querySelector("#input");
+
+
+</script>
 
 </html>
