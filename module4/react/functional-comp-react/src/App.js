@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './components/Counter';
-import UseEffect1 from './components/UseEffect1';
+import Parent from './components/context/Parent';
+import ChildC from './components/context/ChildC';
+
+import Test from './components/context/Test';
+import ThemeChanger from './components/context/ThemeChanger';
+
 
 function App() {
   return (
-  //  <Counter/>
-   <UseEffect1/>
-  );
+    <ThemeChanger/>
+      );
 }
 
 export default App;
