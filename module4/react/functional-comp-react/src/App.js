@@ -9,8 +9,8 @@ import ThemeChanger from './components/context/ThemeChanger';
 
 function App() {
   return (
-    <ThemeChanger/>
-      );
+    <ThemeChanger />
+  );
 }
 
 export default App;
