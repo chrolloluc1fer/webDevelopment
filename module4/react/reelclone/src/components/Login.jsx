@@ -13,7 +13,6 @@ function Login() {
   const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");  
-  const [mainLoader , setMainLoader] = useState(true)
 
   
 
@@ -62,14 +61,14 @@ function Login() {
       }else{
         setUser(null)
       }
-      setMainLoader(false)
+     
     })
   
   },[])
 
   return (
     <div className="Container"> <div className="mainContainer">{
-      mainLoader == true ?<h1>Page is Loading...</h1>:
+    
       error != "" ? <h1>Error is {error}</h1>:
 
       loader === true ? <h1>...loading</h1>:
