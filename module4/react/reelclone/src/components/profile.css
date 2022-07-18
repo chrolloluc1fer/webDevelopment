@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+.header {
+  height: 5rem;
+  border-bottom: 5px solid;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 10rem);
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pimg{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+.pimg_container {
+    
+}
+.details {
+    text-align: center;
+    margin-top: 5rem;
+}
+.content {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    color:gray;
+}
+.bold_text {
+    font-weight: bold;
+    color: black;
+}
+
+
+.main>*{
+    height:80%;
+    width: 40%;
+}
