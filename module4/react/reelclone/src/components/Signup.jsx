@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom'
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,6 +48,8 @@ function Signup() {
         <button type="click" className="signupbutton" onClick={signIn}>
           Sign Up
         </button>
+
+        <Link to="/login"><button type="click" className="loginback">Back To Login</button></Link>
       </div>
     </div>
   );
