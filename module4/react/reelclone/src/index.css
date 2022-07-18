@@ -84,3 +84,10 @@ button{
   border: lightgray 2px solid;
   border-radius: 5px;
 }
+
+.eye{
+  
+    margin-left: -30px;
+    cursor: pointer;
+
+}
