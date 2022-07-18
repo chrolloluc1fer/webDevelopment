@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+.Container{
+  height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-image: linear-gradient(to bottom right, rgb(243, 74, 74) , rgb(0, 102, 255));
+}
+
+.mainContainer,.signupContainer{
+  border:2px solid rgb(145, 143, 143);
+  padding: 5rem 4rem;
+  background-color: #fff;
+}
+.loginemail,.loginpassword,.signuppassword,.signupemail,.signupname{
+  width: 100%;
+  padding:.5rem  4rem .5rem.5rem;
+  margin-bottom: .5rem;
+}
+button{
+  cursor: pointer;
+}
+.loginbutton,.signupbutton{
+  width: 100%;
+  padding:.5rem 1rem;
+  color:white;
+  background-color: rgb(96, 143, 243);
+  border: none;
+  border-radius: 5px;
+
+}
+
+.loginlogout{
+  padding:.5rem 1rem;
+  color:white;
+  background-color: rgb(96, 143, 243);
+  border: none;
+  border-radius: 5px;
+
+}
+
+.clone,.signupTitle{
+  
+  background: -webkit-linear-gradient(rgb(215, 106, 230), rgb(170, 38, 38));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:5rem;
+}
+.mainContainer>span{
+  transform: translateX(-10%);
+  display: inline-block;
+  width: 125%;
+  height: .1em;
+  border-radius: 5px;
+  background-color: gray;
+
+}
+
+.loginsignup{
+  display: flex;
+  align-items: center;
+}
+
+.loginsignup>a{
+  text-decoration: none;
+  margin-left: .25rem;
+  color: rgb(0, 4, 255);
+}
+
