@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth , db} from '../Firebase'
-import { addDoc, collection } from 'firebase/firestore'
+import { doc, collection, setDoc } from 'firebase/firestore'
 
 
 function Signup() {
@@ -31,14 +31,14 @@ function Signup() {
   const signIn = async () => {
     try {
       setLoader(true);
-      let userCred = await createUserWithEmailAndPassword(auth, email, password);
-      const docRef = await addDoc(collection(db,"users"),{
-            email:email,
-            name:name,
-            reelsIds:[],
-            profileImgUrl:"",
-            userId:userCred.user.uid
-      })
+      let userCred = await createUserWithEmailAndPassword(auth,email,password)
+      await setDoc(doc(db, "users", userCred.user.uid), {
+          email,
+          name,
+          reelsIds:[],
+          profileImgUrl:"",
+          userId:userCred.user.uid
+        });
       setUser(userCred.user);
     } catch (error) {
       setError(error.message);

@@ -6,31 +6,50 @@ import { useState } from "react";
 import { db } from '../Firebase'
 import { doc, getDoc } from 'firebase/firestore'
 
+
 function Profile() {
+
   let cUser = useContext(AuthContext);
-  let [loading, setLoading] = useState(true)
+  let [loading,setLoading] = useState(true)
+  let [user,setUser] = useState(null);
+  useEffect(function fn(){
+      (async function(){
+          if(cUser){
+              //read from dabase
+              const docRef = doc(db,"users",cUser.uid);
+              const userObj = await getDoc(docRef);
+              console.log("Document Data: ",userObj.data())
+              setUser(userObj.data());
+              setLoading(false);
+          }
+      })()
+  },[])
 
   return (
-    <>
-    {
-      cUser == null ? <div>Need to Login</div>:
+      <>
+      {
+        loading== true?<div>...loading</div>:
+        <>
+      <div className="header"></div>
+      <div className="main">
+        <div className="pimg_container">
+          <img src = {user.profileImgUrl} className="pimg"/>
+        </div>
+        <div className="details">
+          <div className="content">
+            {user.name}
+          </div>
+          <div className="content">
+            {user.reelsIds.length}
+          </div>
+          <div className="content">
+            {user.email}
+          </div>
           
-    <>
-    
-        <div className="header"></div>
-       <div className="main">
-         <div className="pimg_container">
-           <img src="http://via.placeholder.com/640x360" alt="" className="pimg"/>
-         </div>
-         <div className="details">
-           <div className="content">Shubham</div>
-           <div className="content">No of Posts: <span className="bold_text">Posts</span></div>
-           <div className="content">Email: <span className="bold_text">Email.com</span></div>
-         
-         </div>
-       </div>
-    </>}
-    </>
+        </div>
+      </div>
+      </>}
+      </>
   );
 }
 
