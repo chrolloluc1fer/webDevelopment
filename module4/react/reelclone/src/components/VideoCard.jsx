@@ -3,7 +3,7 @@ import { useState } from "react";
 import './videocard.css'
 
 function VideoCard() {
-  let [playing, setPlaying] = useState(false);
+  let [playing, setPlaying] = useState(true);
   let [commentBoxOpen, setCommentBox] = useState(false);
 
   return (
@@ -47,13 +47,13 @@ function VideoCard() {
         onClick={(e) => {
           if (playing) {
             e.currentTarget.pause();
-            setPlaying(true);
+            setPlaying(false);
           } else {
             e.currentTarget.play();
-            setPlaying(false);
+            setPlaying(true);
           }
         }}
-        src=""
+        src="https://firebasestorage.googleapis.com/v0/b/class-demo-620a8.appspot.com/o/production%20ID_4434242.mp4?alt=media&token=3616c4ef-e3e0-428d-9274-32bdb6d4020a"
       ></video>
     </div>
   );
