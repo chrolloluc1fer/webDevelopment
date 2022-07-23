@@ -43,7 +43,7 @@ function VideoCard() {
             <div className="comment-form">
               <div className="post-user-comment">
               <input type="text" />
-              <button>Post</button>
+              <button className="postButton">Post</button>
               </div>
         
             </div>

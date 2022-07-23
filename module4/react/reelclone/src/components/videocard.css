@@ -67,6 +67,11 @@ video{
 .actual-comment p{
     margin-left: .5rem;
 }
+
+.comment{
+    box-shadow: 0 0  3px 1px black;
+}
+
 .comment h3{
     text-align: center;
     margin-bottom: 1rem;
@@ -77,5 +82,12 @@ video{
     margin-left: 1rem;
 }
 
-
+.postButton{
+    margin-left: .15rem;
+    padding:.15rem .5rem;
+    color:white;
+    background-color: rgb(96, 143, 243);
+    border: none;
+    border-radius: 5px;
+}
 
