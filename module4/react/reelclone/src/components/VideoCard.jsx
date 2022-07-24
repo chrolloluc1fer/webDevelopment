@@ -28,7 +28,7 @@ function VideoCard() {
                 setPlaying(true);
               }
             }}
-            src="https://firebasestorage.googleapis.com/v0/b/class-demo-620a8.appspot.com/o/production%20ID_4434242.mp4?alt=media&token=3616c4ef-e3e0-428d-9274-32bdb6d4020a"
+            src="https://firebasestorage.googleapis.com/v0/b/class-demo-620a8.appspot.com/o/video2.mp4?alt=media&token=690ecc9f-e072-4a12-83a4-ab1002ba4974"
           ></video>
         </div>
         

@@ -1,9 +1,15 @@
 import React from 'react'
-import {auth, storage} from '../Firebase'
+import {auth, storage, db} from '../Firebase'
 import { ref, uploadBytesResumable , getDownloadURL} from "firebase/storage"
 import VideoCard from './VideoCard'
 import "./feed.css"
+import { AuthContext } from "../context/AuthContext";
+import { doc, collection, setDoc } from 'firebase/firestore'
+import { async } from '@firebase/util'
+import { useContext } from "react";
+
 function Feed() {
+  let user = useContext(AuthContext);
   return (
     <>
     <div className="feedHeader">
@@ -42,9 +48,17 @@ function Feed() {
               }
             },(error)=>{
               console.log(error)
-            },()=>{
-              getDownloadURL(uploadTask.snapshot.ref).then((url)=>{
+            }, ()=>{
+              getDownloadURL(uploadTask.snapshot.ref).then(async(url)=>{
                 console.log(url)
+               
+                await setDoc(doc(db, "posts", user.uid+`${name}`), {
+                    
+                    email:user.email,
+                    url:url,
+                    likes:[],
+                    comments:[]
+                  });
               })
             })
         
