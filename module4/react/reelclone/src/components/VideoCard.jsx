@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import './videocard.css'
 
-function VideoCard() {
+function VideoCard(props) {
   let [playing, setPlaying] = useState(true);
   let [commentBoxOpen, setCommentBox] = useState(false);
 
@@ -28,8 +28,7 @@ function VideoCard() {
                 setPlaying(true);
               }
             }}
-            src="https://firebasestorage.googleapis.com/v0/b/class-demo-620a8.appspot.com/o/video2.mp4?alt=media&token=690ecc9f-e072-4a12-83a4-ab1002ba4974"
-          ></video>
+            src= {props.data.url}          ></video>
         </div>
         
         <div className="comment">

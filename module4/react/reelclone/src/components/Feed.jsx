@@ -4,12 +4,26 @@ import { ref, uploadBytesResumable , getDownloadURL} from "firebase/storage"
 import VideoCard from './VideoCard'
 import "./feed.css"
 import { AuthContext } from "../context/AuthContext";
-import { doc, collection, setDoc } from 'firebase/firestore'
-import { async } from '@firebase/util'
+import { doc, setDoc } from 'firebase/firestore'
+import { collection, getDocs } from "firebase/firestore";
 import { useContext } from "react";
+import { useEffect,useState } from 'react'
 
 function Feed() {
   let user = useContext(AuthContext);
+  let [posts, setPosts] = useState([]);
+  useEffect(async ()=>{
+    const querySnapshot = await getDocs(collection(db, "posts"));
+    let arr =[]
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().url);
+  arr.push({id : doc.id,...doc.data()});
+});
+setPosts(arr)
+
+  },[])
+
   return (
     <>
     <div className="feedHeader">
@@ -67,8 +81,10 @@ function Feed() {
         />
       </div>
         <div className="upload_container">
-            
-              <VideoCard></VideoCard>
+              {posts.map((post) =>{
+                return  <VideoCard key={post.id} data={post}/>
+              })}
+             
             
         </div>
         
