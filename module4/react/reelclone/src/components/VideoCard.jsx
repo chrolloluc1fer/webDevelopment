@@ -10,7 +10,9 @@ function VideoCard(props) {
   let [playing, setPlaying] = useState(true);
   let [currUserComment, setCurrUserComment] = useState("");
   let [comments, setComments] = useState([]);
- 
+  
+  let [currUserLiked,SetCurrUserLiked] = useState(false);
+
     useEffect(async () => {
       let commentsIdArr = props.data.comments;
       let arr = [];
@@ -21,7 +23,15 @@ function VideoCard(props) {
       }
       console.log("Array ", arr)
       setComments(arr);
+      if (user) {
+        let a = props.data.likes.includes(user.uid);
+        SetCurrUserLiked(a)
+    }
   }, [props]);
+
+ 
+
+
   return (
     <div className="video-card">
       <div className="left">
@@ -33,6 +43,24 @@ function VideoCard(props) {
         </span>
       </div>
 
+      <span
+         onClick={async () => {
+          let likesArr = props.data.likes;
+          if (currUserLiked) {
+              likesArr = likesArr.filter((el) => el != user.uid);
+          } else {
+              likesArr.push(user.uid);
+          }
+          const postsRef = doc(db, "posts", props.data.id);
+          await updateDoc(postsRef, {
+              likes: likesArr
+          });
+          let c = !currUserLiked;
+          SetCurrUserLiked(c);
+        }}    
+      >
+        {currUserLiked ? "Liked" : "Do you like it"}
+      </span>
       <div className="right">
         <div className="videoContainer">
           <video
@@ -56,15 +84,11 @@ function VideoCard(props) {
           {comments.map((comment) => {
                         return (
                             <div className="actual-comments">
-                                <h5>{comment.email}</h5>
                                 <p>{comment.comment}</p>
                             </div>
                         )
                     })}
-              <div className="actual-comments">
-                        <h5>User name</h5>
-                        <p>This is actual comment</p>
-                    </div>
+            
 
             <div className="comment-form">
               <div className="post-user-comment">

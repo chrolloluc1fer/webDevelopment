@@ -83,7 +83,8 @@ video{
 }
 
 .postButton{
-    margin-left: .15rem;
+    font-size: smaller;
+    margin-left: .5rem;
     padding:.15rem .5rem;
     color:white;
     background-color: rgb(96, 143, 243);
