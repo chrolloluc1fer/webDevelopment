@@ -18,7 +18,9 @@ function App() {
       <button onClick={() => { dispatch(loginCreator()) }}>Login</button>
       <button onClick={() => { dispatch(logoutCreator()) }}>Logout</button>
       {logged ? (<><p>{count}</p>
-        <button onClick={() => { dispatch(incrementCounter()) }}>+</button>
+        <button onClick={() => { dispatch(incrementCounter(1)) }}>+</button>
+        <button onClick={() => { dispatch(incrementCounter(10)) }}>+10</button>
+      
         <button onClick={() => { dispatch(decrementCounter()) }}>-</button>
       </>
       ) : ""}
