@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.product-img {
+  height: 80%;
+}
+
+.product-card {
+  height: 20rem;
+  width: 15rem;
+  box-shadow: 0 0 5px 0 gray;
+}
+
+.product-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-btn {
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-btn button {
+  border: none;
+  outline: none;
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 8px;
+  padding:4px 8px;
+}
