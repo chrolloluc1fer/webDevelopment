@@ -20,11 +20,10 @@ function App() {
       {/* <Route path="/feed">
        <Feed></Feed>
       </Route> */}
-    
-      <Route path="/login">
+      <RedirectToFeed path='/login' comp={Login}></RedirectToFeed>
+      {/* <Route path="/login">
        <Login></Login>
-      </Route>
-      
+      </Route> */}
       <RedirectToFeed path='/signup' comp ={Signup}></RedirectToFeed>
       {/* <Route path="/signup">
        <Signup></Signup>
