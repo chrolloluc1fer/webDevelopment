@@ -35,15 +35,9 @@ function VideoCard(props) {
   return (
     <div className="video-card">
       <div className="left">
-        <p className="video-card-username">Shubham</p>
-        <span className="video-card-music">
-          <p behavior="" direction="">
-            Song name
-          </p>
-        </span>
-      </div>
-
-      <span
+    
+        <p className="video-card-username">Current User</p>
+        <span
          onClick={async () => {
           let likesArr = props.data.likes;
           if (currUserLiked) {
@@ -59,8 +53,10 @@ function VideoCard(props) {
           SetCurrUserLiked(c);
         }}    
       >
-        {currUserLiked ? "Liked" : "Do you like it"}
+        {currUserLiked ? <button className="likeButton">Like</button> : <button className="likeButton">You Liked It</button> }
       </span>
+      </div>
+
       <div className="right">
         <div className="videoContainer">
           <video
