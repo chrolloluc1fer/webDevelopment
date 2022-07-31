@@ -1,15 +1,29 @@
-import './home.css'
-import Product from './Product';
-import React from 'react'
-
-function Home() {
-  return (
-    <div className='product-container'>
-        <Product/>
-        <Product/>
-        <Product/>
-    </div>
-  )
+import Product from "./Product"
+import "./home.css"
+import {useSelector} from "react-redux"
+import {useHistory} from "react-router"
+let Home = () => {
+    let history = useHistory();
+    let state = useSelector((state)=>state);
+    return (
+        <>
+            <div className="product-container">
+                {state.map((el,index)=>(
+                    <Product key={index} data={el} />
+                ))}
+                
+            </div>
+            <button
+            onClick={()=>{
+                history.push("/cart")
+            }}
+            className="shopping-cart-home">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </button>
+        </>
+    )
 }
 
 export default Home

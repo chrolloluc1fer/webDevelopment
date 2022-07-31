@@ -1,15 +1,16 @@
-import React from "react";
+import {Link} from "react-router-dom"
 
-function NavBar() {
-  return (
-    <>
-      <nav className="navbar navbar-dark bg-dark">
-        <div className="container-fluid">
-          <div className="navbar-brand">Shopping Cart</div>
-        </div>
-      </nav>
-    </>
-  );
+let Navbar = () => {
+    return (
+        <>
+            <nav className="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <Link to="/" className="navbar-brand">Shopping Cart</Link>
+            </div>
+            </nav>
+            
+        </>
+    )
 }
 
-export default NavBar;
+export default Navbar;

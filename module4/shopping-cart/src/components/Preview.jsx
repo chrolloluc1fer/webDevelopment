@@ -1,27 +1,33 @@
-import React from "react";
-import "./preview.css";
-function Preview() {
-  return (
-    <>
-      <div className="preview-container">
-        <div className="preview-img-container">
-          <img
-            src="https://m.media-amazon.com/images/I/71fJ-gmBZtL._SL1500_.jpg"
-            alt=""
-          />
-        </div>
-        <div className="preview-listing">
-          <h2>iPhone</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-            repellendus voluptates neque, a ipsa suscipit eos sunt non excepturi
-            quam.
-          </p>
-          <button className="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </>
-  );
-}
+import "./preview.css"
+import { useParams } from "react-router"
+import { useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { addCreator } from "../redux/action"
 
-export default Preview;
+let Preview = () => {
+    let { id } = useParams();
+    let state = useSelector((state) => state);
+    let reqObj = state[id];
+    let dispatch = useDispatch()
+    return (
+
+        <>
+            <div className="preview-container">
+                <div className="preview-img-container">
+                    <img src={reqObj.img} alt="" />
+                </div>
+                <div className="preview-listing">
+                    <h2>{reqObj.name}</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed rem libero quasi saepe voluptate et sapiente quam nostrum aut iure odit eos id, architecto tempore non eaque dolore, quibusdam animi.e
+                    </p>
+                    <button onClick={() => {
+                        dispatch(addCreator(id))
+                        alert("Added to Cart!!")
+                    }}>Add to Cart</button>
+                </div>
+            </div>
+        </>
+    )
+}
+export default Preview
