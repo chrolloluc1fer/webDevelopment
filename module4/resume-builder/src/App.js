@@ -18,7 +18,7 @@ function App() {
       <Route path='/' exact><LandingPage/></Route>
       <Route path='/template' exact><Template/></Route>
       <Route path='/signin' exact><SignIn/></Route>
-      <Route path='/about' exact><About/></Route>
+      <Route path='/aboutus' exact><About/></Route>
       <Route path='/register' exact><Register/></Route>
     </Switch>
    
