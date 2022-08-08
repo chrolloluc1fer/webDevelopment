@@ -35,3 +35,7 @@ button:hover{
     color:white;
     background-color: purple;
 }
+
+input{
+    padding:.15rem .25rem;
+}
