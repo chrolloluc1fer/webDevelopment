@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+.header-logo{
+    margin: 1rem;
+}
+
+.header-logo img{
+    width: 10rem;
+    box-shadow: 0 0 2px solid gray;
+}
+
+ul{
+    display: flex;
+    margin: 1.5rem;
+    list-style: none;
+}
+
+li {
+    margin: 0 1rem;
+}
+
+li a{
+    text-decoration: none;
+}
+
+.register-btn{
+    padding: 0.25rem .5rem;
+    color: white;
+    background-color: rgb(206, 20, 20);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: red 1px solid;
+}
+ 
+li a:hover{
+    color:black;
+}
+
+
+.register-btn:hover{
+    color: red;
+    background-color: white;
+    border: red 1px solid;
+}

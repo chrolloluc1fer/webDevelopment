@@ -1,0 +1,24 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    line-height: 1.8;
+}
+
+.templates{
+    margin:2rem 0 0 1rem;
+}
+.templates-intro{
+    text-align: center;
+}
+
+.templates-style{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.template img{
+    width: 25rem;
+    border:3px solid black
+}
