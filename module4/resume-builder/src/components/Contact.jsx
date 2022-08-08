@@ -4,11 +4,14 @@ import "./contact.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+
+
+
 function Contact() {
+
   const [contact, setContact] = useState({});
 
-  console.log(contact);
-  
+
   const onChange = (event) => {
     let key = event.target.id;
     let value = event.target.value;
@@ -76,6 +79,12 @@ function Contact() {
           <Link to="/education">
             <div className="next">
               <button>Next</button>
+            </div>
+
+          </Link>
+          <Link to="/template">
+            <div className="previous">
+              <button>previous</button>
             </div>
           </Link>
         </div>
