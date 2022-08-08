@@ -22,3 +22,23 @@
     width: 25rem;
     border:3px solid black
 }
+
+
+.template{
+    position: relative;
+}
+.template-btn{
+    position: absolute;
+    top:75%;
+    left:50%;
+    transform: translate(-50%);
+    background: none;
+    color: white;
+    background-color: rgb(62, 183, 231);
+    border: none;
+    padding:.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+

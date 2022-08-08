@@ -19,27 +19,35 @@ function Template() {
       <div className="templates-style">
         <div className="template">
           <img src={skin1} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin2} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin3} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin4} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin5} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin6} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin7} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
         <div className="template">
           <img src={skin8} alt="" />
+          <button className='template-btn'>Use this template</button>
         </div>
       </div>
     </div>
