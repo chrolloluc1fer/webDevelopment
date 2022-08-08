@@ -1,9 +1,12 @@
 import { useSelector } from "react-redux";
-
+import "./cart.css";
+import { useDispatch } from "react-redux";
+import { addCreator, removeCreator } from "../redux/action";
 let Cart = () => {
   let state = useSelector((state) => state);
   let filteredArr = state.filter((el) => el.qty > 0);
   let total = 0;
+  let dispatch = useDispatch();
   return (
     <>
       <table class="table">
@@ -25,7 +28,22 @@ let Cart = () => {
                 <th scope="row">{index + 1}</th>
                 <td>{el.name}</td>
                 <td>{el.price}</td>
-                <td>{el.qty}</td>
+
+                <td>
+                  <button
+                    className="decrease"
+                    onClick={() => dispatch(removeCreator(index))}
+                  >
+                    -
+                  </button>
+                  {el.qty}
+                  <button
+                    className="increase"
+                    onClick={() => dispatch(addCreator(index))}
+                  >
+                    +
+                  </button>
+                </td>
                 <td>{amount}</td>
               </tr>
             );
