@@ -5,6 +5,8 @@ import Header from './components/Header';
 import SignIn from './components/SignIn';
 import About from './components/About';
 import Register from './components/Register';
+import Contact from './components/Contact';
+import Education from './components/Education';
 
 import { Switch, Router, Route } from 'react-router-dom'
 
@@ -20,6 +22,8 @@ function App() {
       <Route path='/signin' exact><SignIn/></Route>
       <Route path='/aboutus' exact><About/></Route>
       <Route path='/register' exact><Register/></Route>
+      <Route path='/contact' exact><Contact/></Route>
+      <Route path='/education' exact><Education/></Route>
     </Switch>
    
    
