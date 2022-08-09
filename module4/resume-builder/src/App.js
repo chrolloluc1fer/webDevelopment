@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import Education from './components/Education';
 import Final from './components/Final';
 import { Switch, Router, Route } from 'react-router-dom'
-
+import Skill from './components/Skill';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
       <Route path='/register' exact><Register/></Route>
       <Route path='/contact' exact><Contact/></Route>
       <Route path='/education' exact><Education/></Route>
+      <Route path='/skill' exact><Skill/></Route>
       <Route path='/final' exact><Final/></Route>
     </Switch> 
    </>

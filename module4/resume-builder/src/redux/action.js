@@ -1,7 +1,7 @@
 export const setSkinCreator = (value) => {
     return {
         type: "SET_SKIN",
-        document:value
+        document: value
     }
 }
 
@@ -19,3 +19,10 @@ export const addEducationCreator = (value) => {
     }
 }
 
+
+export const addSkillCreator = (value) => {
+    return {
+        type: "ADD_SKILL",
+        skill: value
+    }
+}
