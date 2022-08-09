@@ -28,6 +28,16 @@ const Skin5 = () => {
     graduationyear,
   } = props.educationReducer;
 
+
+  let {
+    skill1,
+    skill2,
+    skill3,
+    skill4,
+    skill5,
+    skill6,
+    skill7,
+  } = props.skillReducer;
     return (
         <React.Fragment>
             <div className="prev-header">
@@ -76,6 +86,21 @@ const Skin5 = () => {
                 <div className="cgpa">{`CGPA: ${cgpa != undefined ? cgpa : ""}`}</div>
             </div>
             </div>
+
+            <div className="skills-details">
+        <div className="skills-heading-details">Skills</div>
+        <span className="skills-border"></span>
+        <div className="total-skills">
+          <div>1. {skill1}</div>
+          <div>2. {skill2}</div>
+          <div>3. {skill3}</div>
+          <div>4. {skill4}</div>
+          <div>5. {skill5}</div>
+          <div>6. {skill6}</div>
+          <div>7. {skill7}</div>
+        </div>
+       
+      </div>
         </React.Fragment>
 
     );

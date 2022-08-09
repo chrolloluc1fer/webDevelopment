@@ -27,6 +27,17 @@ const Skin1 = () => {
     graduationmonth,
     graduationyear,
   } = props.educationReducer;
+
+  let {
+    skill1,
+    skill2,
+    skill3,
+    skill4,
+    skill5,
+    skill6,
+    skill7,
+  } = props.skillReducer;
+
 //   let skills = props.skills;
   // console.log(props);
 //   let projects = props.projects;
@@ -83,6 +94,21 @@ const Skin1 = () => {
             {graduationyear}
           </div>
         </div>
+      </div>
+
+      <div className="skills-details">
+        <div className="skills-heading-details">Skills</div>
+        <span className="skills-border"></span>
+        <div className="total-skills">
+          <div>1. {skill1}</div>
+          <div>2. {skill2}</div>
+          <div>3. {skill3}</div>
+          <div>4. {skill4}</div>
+          <div>5. {skill5}</div>
+          <div>6. {skill6}</div>
+          <div>7. {skill7}</div>
+        </div>
+       
       </div>
     </React.Fragment>
   );

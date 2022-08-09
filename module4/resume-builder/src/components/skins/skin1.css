@@ -143,3 +143,25 @@
     margin-left: 8%;
     
 }
+
+.skills-heading-details{
+    text-align: center;
+}
+
+.skills-border{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(19, 129, 255);
+}
+
+.total-skills{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.total-skills div{
+    font-weight: 400;
+    margin:0.5rem 1rem;
+}
