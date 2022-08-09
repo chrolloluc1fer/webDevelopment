@@ -25,49 +25,49 @@ function Final() {
         <Preview></Preview>
       </div>
       <div className="final-template">
-        <div className="templates">
+        <div className="templatess">
           <img src={skin1} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin1")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin2} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin2")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin3} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin3")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin4} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin4")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin5} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin5")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin6} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin6")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin7} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin7")}}>USE TEMPLATE</button>
           </Link>
         </div>
-        <div className="templates">
+        <div className="templatess">
           <img src={skin8} alt="" />
           <Link to="/contact">
             <button class="btn" onClick={() => {handleSkinSelect("skin8")}}>USE TEMPLATE</button>
