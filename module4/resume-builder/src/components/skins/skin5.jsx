@@ -2,29 +2,31 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './skin5.css'
 const Skin5 = () => {
-    let props = useSelector((state)=>state);    
-    let {
-        fname,
-        lname,
-        summary,
-        email,
-        phone,
-        profession,
-        street,
-        city,
-        state,
-        country,
-        pin,
-    } = props.contactReducer;
+    
+  let props = useSelector((state)=>state)
+  let {
+    fname,
+    lname,
+    summary,
+    email,
+    phoneno,
+    profession,
+    street,
+    city,
+    state,
+    country,
+    pincode,
+  } = props.contactReducer;
 
-
-    let { cgpa,
-         city: educationCity,
-         state: educationState,
-         degree, collegeName, 
-         graduationMonth, 
-         graduationYear,
-         } = props.educationReducer;
+  let {
+    cgpa,
+    city: educationCity,
+    state: educationState,
+    degree,
+    collegename,
+    graduationmonth,
+    graduationyear,
+  } = props.educationReducer;
 
     return (
         <React.Fragment>
@@ -39,9 +41,9 @@ const Skin5 = () => {
                         <div className="city">{city}</div>
                         <div className="state">{state}</div>
                         <div className="country">{country}</div>
-                        <div className="pin">{pin}</div>
+                        <div className="pin">{pincode}</div>
                     </div>
-                    <div className="phone">{`Ph - ${phone}`}</div>
+                    <div className="phone">{`Ph - ${phoneno}`}</div>
                     <div className="email">{`Email - ${email}`}</div>
                 </div>
             </div>
@@ -58,14 +60,14 @@ const Skin5 = () => {
                 <div className="line1">
                     
                     <div className="edu-end">
-                        <div className="graduationMonth">{graduationMonth}</div>
-                        <div className="graduationYear">{graduationYear}</div>
+                        <div className="graduationMonth">{graduationmonth}</div>
+                        <div className="graduationYear">{graduationyear}</div>
                     </div>
                 </div>
                 <div className="edu-contact">
                 <div className="course-detail">
                         <div className="degree">{degree}</div>
-                        <div className="college">: {collegeName}</div>
+                        <div className="college">: {collegename}</div>
                     </div>
                     <div className="educationCity">{educationCity}</div>
                     <div className="educationState">{educationState}</div>

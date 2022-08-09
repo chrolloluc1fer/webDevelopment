@@ -9,13 +9,13 @@ const Skin1 = () => {
     lname,
     summary,
     email,
-    phone,
+    phoneno,
     profession,
     street,
     city,
     state,
     country,
-    pin,
+    pincode,
   } = props.contactReducer;
 
   let {
@@ -23,9 +23,9 @@ const Skin1 = () => {
     city: educationCity,
     state: educationState,
     degree,
-    collegeName,
-    graduationMonth,
-    graduationYear,
+    collegename,
+    graduationmonth,
+    graduationyear,
   } = props.educationReducer;
 //   let skills = props.skills;
   // console.log(props);
@@ -45,10 +45,10 @@ const Skin1 = () => {
         </div>
         <div className="email-phone">
           <div className="email-details">{email}</div>
-          <div className="phone-details">{phone}</div>
+          <div className="phone-details">{phoneno}</div>
         </div>
         <div className="address-details">
-          {street} {city} {pin} {state} {country}
+          {street} {city} {pincode} {state} {country}
         </div>
         <div className="profession-details">{profession}</div>
       </div>
@@ -79,8 +79,8 @@ const Skin1 = () => {
             {degree} with GPA : {cgpa}
           </div>
           <div className="education-details-name">
-            {collegeName} , {educationCity} , {educationState} {graduationMonth}{" "}
-            {graduationYear}
+            {collegename} , {educationCity} , {educationState} {graduationmonth}{" "}
+            {graduationyear}
           </div>
         </div>
       </div>
