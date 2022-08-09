@@ -2,20 +2,22 @@ import React from "react";
 import Preview from "./Preview";
 import "./contact.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-
+import {addContactCreator} from '../redux/action'
 
 
 function Contact() {
-
-  const [contact, setContact] = useState({});
-
+  let state = useSelector((state) => state)
+  let dispatch = useDispatch();
+  let contact = state.contactReducer;
+  console.log(contact);
 
   const onChange = (event) => {
     let key = event.target.id;
     let value = event.target.value;
-    setContact({ ...contact, [key]: value });
+    let newContact  = {...contact,[key]:value}
+    dispatch(addContactCreator(newContact))
   };
 
   const getFieldData = (key) => {
@@ -73,7 +75,7 @@ function Contact() {
             <input type="text" id="country" value={getFieldData("country")} onChange={onChange} />
           </div>
           <div className="input-group">
-            <label htmlFor="">Pin Code</label>
+            <label htmlFor="">Pincode</label>
             <input type="text" id="pincode" value={getFieldData("pincode")} onChange={onChange} />
           </div>
           <Link to="/education">
