@@ -1,4 +1,6 @@
 .preview{
     text-align: left;
     padding:1rem;
+    overflow: hidden;
 }
+

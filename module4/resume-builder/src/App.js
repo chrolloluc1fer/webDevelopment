@@ -7,14 +7,13 @@ import About from './components/About';
 import Register from './components/Register';
 import Contact from './components/Contact';
 import Education from './components/Education';
-
+import Final from './components/Final';
 import { Switch, Router, Route } from 'react-router-dom'
 
 
 function App() {
   return (
    <>
-  
     <Header/>
       <Switch>
       <Route path='/' exact><LandingPage/></Route>
@@ -24,11 +23,8 @@ function App() {
       <Route path='/register' exact><Register/></Route>
       <Route path='/contact' exact><Contact/></Route>
       <Route path='/education' exact><Education/></Route>
-    </Switch>
-   
-   
-
-   
+      <Route path='/final' exact><Final/></Route>
+    </Switch> 
    </>
   );
 }

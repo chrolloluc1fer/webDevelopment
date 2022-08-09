@@ -1,0 +1,34 @@
+.finalize{
+    padding:2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finalize-preview{
+    width: 60%;
+    box-shadow: 0 0 2px 2px lightgray;
+    height: 70rem;
+}
+.final-template{
+    box-shadow: 0 0 2px 2px lightgray;
+    width: 30%;
+}
+.templates{
+    border:2px solid black;
+    position: relative;
+    width: 10rem;
+}
+
+.btn{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%);
+    font-size: .5rem;
+    background: none;
+    color: white;
+    background-color: rgb(62, 183, 231);
+    border: none;
+    padding:.15em .5em;
+    border-radius: 2px;
+}

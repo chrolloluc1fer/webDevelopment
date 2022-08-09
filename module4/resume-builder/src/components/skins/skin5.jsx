@@ -43,8 +43,8 @@ const Skin5 = () => {
                         <div className="country">{country}</div>
                         <div className="pin">{pincode}</div>
                     </div>
-                    <div className="phone">{`Ph - ${phoneno}`}</div>
-                    <div className="email">{`Email - ${email}`}</div>
+                    <div className="phone">{`Ph - ${phoneno != undefined ? phoneno : ""}`}</div>
+                    <div className="email">{`Email - ${email != undefined ? email : ""}`}</div>
                 </div>
             </div>
             <div className="hsum">
@@ -73,7 +73,7 @@ const Skin5 = () => {
                     <div className="educationState">{educationState}</div>
                     
                 </div>
-                <div className="cgpa">{`CGPA: ${cgpa}`}</div>
+                <div className="cgpa">{`CGPA: ${cgpa != undefined ? cgpa : ""}`}</div>
             </div>
             </div>
         </React.Fragment>

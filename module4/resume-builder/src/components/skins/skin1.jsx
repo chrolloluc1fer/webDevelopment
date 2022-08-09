@@ -41,7 +41,7 @@ const Skin1 = () => {
     <React.Fragment>
       <div className="contact-details-skin1">
         <div className="contact-full-name">
-          {fname} {lname}
+          {fname != undefined ? fname : ""} {lname != undefined ? lname : ""}
         </div>
         <div className="email-phone">
           <div className="email-details">{email}</div>

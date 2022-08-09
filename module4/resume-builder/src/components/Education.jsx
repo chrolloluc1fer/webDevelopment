@@ -66,7 +66,7 @@ function Education() {
             <input type="text" id="graduationyear" value={getFieldData("graduationyear")} onChange={onChange} />
           </div>
           <div className="next">
-            <button>Next</button>
+        <Link to="/final"><button>Next</button></Link>    
           </div>
           <Link to="/contact">
             <div className="previous">

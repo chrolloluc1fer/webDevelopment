@@ -8,8 +8,14 @@ import skin7 from "../static/images/skin7.svg";
 import skin8 from "../static/images/skin8.svg";
 import { Link } from "react-router-dom";
 import './template.css'
+import { useDispatch } from "react-redux";
+import { setSkinCreator } from "../redux/action";
 
 function Template() {
+  let dispatch = useDispatch();
+   const handleSkinSelect = (skin)=>{
+    dispatch(setSkinCreator(skin))
+   } 
   return (
     <div className="templates">
       <div className="templates-intro">
@@ -19,41 +25,41 @@ function Template() {
       <div className="templates-style">
         <div className="template">
           <img src={skin1} alt="" />
-         <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+         <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin1")}}>Use this template</button></Link> 
         </div>
         <div className="template">
           <img src={skin2} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin2")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin3} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin3")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin4} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin4")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin5} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin5")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin6} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin6")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin7} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin7")}}>Use this template</button></Link> 
         
         </div>
         <div className="template">
           <img src={skin8} alt="" />
-          <Link to="/contact"><button className='template-btn'>Use this template</button></Link> 
+          <Link to="/contact"><button className='template-btn' onClick={() => {handleSkinSelect("skin8")}}>Use this template</button></Link> 
         
         </div>
       </div>
