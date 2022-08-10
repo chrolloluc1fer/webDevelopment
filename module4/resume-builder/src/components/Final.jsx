@@ -22,24 +22,23 @@ function Final() {
   };
 
   const downloadResume = () => {
-
     const input = document.getElementById("resumePreview");
-    html2canvas(input).then(function (canvas) {
-      const imgDate = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
+    html2canvas(input)
+      .then(function (canvas) {
+        const imgDate = canvas.toDataURL("image/png");
+        const pdf = new jsPDF("p", "mm", "a4");
 
-      var width = pdf.internal.pageSize.getWidth();
-      var height = pdf.internal.pageSize.getHeight();
+        var width = pdf.internal.pageSize.getWidth();
+        var height = pdf.internal.pageSize.getHeight();
 
-      pdf.addImage(imgDate, "JPEG", 0, 0, width, height);
+        pdf.addImage(imgDate, "JPEG", 0, 0, width, height);
 
-      pdf.save("resume.pdf")
-      
-    }).catch((error)=>{
-      console.log(error)
-    });
+        pdf.save("resume.pdf");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
 
   return (
     <div className="finalize">

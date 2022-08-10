@@ -26,3 +26,9 @@ export const addSkillCreator = (value) => {
         skill: value
     }
 }
+
+export const logoutCreator = ()=>{
+    return{
+        type:"LOGOUT"
+    }
+}

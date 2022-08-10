@@ -1,8 +1,12 @@
 import './header.css'
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Header() {
+  let state = useSelector((state) => state);
+  let auth = state.authReducer;
+
   return (
     <div className="header">
       <div className="header-logo">
@@ -13,12 +17,19 @@ function Header() {
         </Link>
       </div>
       <div className="header-link">
+      {auth.isAuth?<ul>
+            <li><Link to="/template">Resume Templates</Link></li>
+            <li><Link to="/aboutus">About Us</Link></li>
+            <li><Link to="/aboutus">Sign Out</Link></li>
+            
+        </ul>:
         <ul>
             <li><Link to="/template">Resume Templates</Link></li>
             <li><Link to="/aboutus">About Us</Link></li>
             <li><Link to="/register"><button className="register-btn">Register</button></Link></li>
             <li><Link to="/signin">Sign In</Link></li>
-        </ul>
+        </ul>}
+        
       </div>
     </div>
   );
