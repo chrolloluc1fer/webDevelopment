@@ -63,7 +63,7 @@ function Skill() {
             <input type="text" id="skill7" value={getFieldData("skill7")} onChange={onChange}/>
           </div>
           <div className="next">
-        <Link to="/"><button>Next</button></Link>    
+        <Link to="/final"><button>Next</button></Link>    
           </div>
           <Link to="/education">
             <div className="previous">

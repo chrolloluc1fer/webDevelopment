@@ -32,3 +32,48 @@
     padding:.15em .5em;
     border-radius: 2px;
 }
+
+.final-template{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:.25rem;
+}
+
+.templatess{
+    margin:.5rem;
+}
+
+.finalize{
+    position: relative;
+}
+
+.download-option{
+    position: fixed;
+    top:75%;
+    left:62.5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download-btn button{
+    font-size: larger;
+    padding:.5rem 1rem;
+    border: 2px solid rgb(230, 8, 8);
+    color: white;
+    background:rgb(230, 8, 8);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 800px;
+}
+
+.save-btn button{
+    font-size: larger;
+    padding:.5rem 1rem;
+    border: 2px solid rgb(230, 8, 8);
+    color: white;
+    background:rgb(230, 8, 8);
+    cursor: pointer;
+    border-radius: 800px;
+}

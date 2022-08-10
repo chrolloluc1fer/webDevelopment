@@ -24,6 +24,11 @@ function Final() {
       <div className="finalize-preview">
         <Preview></Preview>
       </div>
+      <div className="download-option">
+      <div className="download-btn"><button><i class="fa fa-download" aria-hidden="true"></i></button></div>
+      <div className="save-btn"><button><i class="fa fa-floppy-o" aria-hidden="true"></i></button></div>
+      </div>
+      
       <div className="final-template">
         <div className="templatess">
           <img src={skin1} alt="" />
@@ -74,6 +79,7 @@ function Final() {
           </Link>
         </div>
       </div>
+      
     </div>
   );
 }
