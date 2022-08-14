@@ -27,12 +27,46 @@ app.get("/", function(req, res){
 //     res.send("Patch wala hello")
 // })
 
+let user;
+
 app.get("/getSquare/:num1/:num2",(req, res)=>{
     console.log(req.params)
     let num1 = req.params.num1;
     let num2 = req.params.num2
     let multiple = num1 * num2
     res.send("Multiple is : " +multiple);
+})
+
+
+app.post("/sayHello",(req, res) =>{
+    console.log(req.body)
+    user = req.body;
+    res.json({
+        message:"Data recieved Successfully",
+        user:user
+    })  
+})
+
+//patch
+app.patch("/sayHello", (req, res) =>{
+    dataToUpdate = req.body;
+    for(key in dataToUpdate){
+        user[key] = dataToUpdate[key];
+    }
+    res.json({
+        message:"Data update",
+        user:user
+    })
+    res.send("Hello from patch")
+})
+
+//delete
+app.delete("/sayHello", (req, res) =>{
+    user = {}
+    res.json({
+        message:"Deleted",
+        user:user
+    })
 })
 
 app.get("/sayBye", function(req, res){
